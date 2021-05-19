@@ -83,6 +83,7 @@
             this.id_perfil});
             this.dgv_Perfil.Location = new System.Drawing.Point(65, 101);
             this.dgv_Perfil.Name = "dgv_Perfil";
+            this.dgv_Perfil.ReadOnly = true;
             this.dgv_Perfil.Size = new System.Drawing.Size(389, 150);
             this.dgv_Perfil.TabIndex = 3;
             this.dgv_Perfil.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Perfil_CellContentClick);
@@ -91,11 +92,13 @@
             // 
             this.descripcion_perfil.HeaderText = "Nombre";
             this.descripcion_perfil.Name = "descripcion_perfil";
+            this.descripcion_perfil.ReadOnly = true;
             // 
             // id_perfil
             // 
             this.id_perfil.HeaderText = "id_perfil";
             this.id_perfil.Name = "id_perfil";
+            this.id_perfil.ReadOnly = true;
             this.id_perfil.Visible = false;
             // 
             // btn_Eliminar

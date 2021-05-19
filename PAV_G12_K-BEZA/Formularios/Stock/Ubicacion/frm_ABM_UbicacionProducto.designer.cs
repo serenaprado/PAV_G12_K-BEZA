@@ -96,6 +96,7 @@
             this.id_ubicacion});
             this.dgv_UbicacionProducto.Location = new System.Drawing.Point(34, 117);
             this.dgv_UbicacionProducto.Name = "dgv_UbicacionProducto";
+            this.dgv_UbicacionProducto.ReadOnly = true;
             this.dgv_UbicacionProducto.Size = new System.Drawing.Size(426, 150);
             this.dgv_UbicacionProducto.TabIndex = 15;
             this.dgv_UbicacionProducto.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_UbicacionProducto_CellContentClick_1);
@@ -104,12 +105,14 @@
             // 
             this.descripcion_ubicacion.HeaderText = "Nombre";
             this.descripcion_ubicacion.Name = "descripcion_ubicacion";
+            this.descripcion_ubicacion.ReadOnly = true;
             this.descripcion_ubicacion.Width = 200;
             // 
             // id_ubicacion
             // 
             this.id_ubicacion.HeaderText = "id_ubicacion";
             this.id_ubicacion.Name = "id_ubicacion";
+            this.id_ubicacion.ReadOnly = true;
             this.id_ubicacion.Visible = false;
             // 
             // btn_Agregar

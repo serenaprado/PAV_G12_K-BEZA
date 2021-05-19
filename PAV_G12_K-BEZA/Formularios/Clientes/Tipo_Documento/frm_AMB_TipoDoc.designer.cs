@@ -82,6 +82,7 @@
             this.id_tipodoc});
             this.dgv_tipodoc.Location = new System.Drawing.Point(78, 95);
             this.dgv_tipodoc.Name = "dgv_tipodoc";
+            this.dgv_tipodoc.ReadOnly = true;
             this.dgv_tipodoc.Size = new System.Drawing.Size(347, 144);
             this.dgv_tipodoc.TabIndex = 3;
             this.dgv_tipodoc.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
@@ -90,12 +91,14 @@
             // 
             this.descripcion_tipodoc.HeaderText = "Tipo Documento";
             this.descripcion_tipodoc.Name = "descripcion_tipodoc";
+            this.descripcion_tipodoc.ReadOnly = true;
             this.descripcion_tipodoc.Width = 200;
             // 
             // id_tipodoc
             // 
             this.id_tipodoc.HeaderText = "Id";
             this.id_tipodoc.Name = "id_tipodoc";
+            this.id_tipodoc.ReadOnly = true;
             this.id_tipodoc.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.id_tipodoc.Visible = false;
             // 

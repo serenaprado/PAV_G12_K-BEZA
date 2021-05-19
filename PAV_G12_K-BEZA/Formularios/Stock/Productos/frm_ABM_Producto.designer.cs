@@ -180,6 +180,7 @@
             this.id_producto});
             this.grid_Productos.Location = new System.Drawing.Point(31, 199);
             this.grid_Productos.Name = "grid_Productos";
+            this.grid_Productos.ReadOnly = true;
             this.grid_Productos.Size = new System.Drawing.Size(547, 217);
             this.grid_Productos.TabIndex = 6;
             this.grid_Productos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid_Productos_CellContentClick);
@@ -189,17 +190,20 @@
             // 
             this.Column1.HeaderText = "Descripcion";
             this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             this.Column1.Width = 200;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "Precio";
             this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
             // 
             // Tipo_Producto
             // 
             this.Tipo_Producto.HeaderText = "Tipo Producto";
             this.Tipo_Producto.Name = "Tipo_Producto";
+            this.Tipo_Producto.ReadOnly = true;
             this.Tipo_Producto.Width = 200;
             // 
             // id_producto

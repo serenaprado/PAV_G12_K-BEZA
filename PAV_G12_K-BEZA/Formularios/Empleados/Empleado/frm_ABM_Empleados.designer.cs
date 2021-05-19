@@ -200,6 +200,7 @@
             this.legajo_empleado});
             this.grid_Empleados.Location = new System.Drawing.Point(22, 216);
             this.grid_Empleados.Name = "grid_Empleados";
+            this.grid_Empleados.ReadOnly = true;
             this.grid_Empleados.Size = new System.Drawing.Size(568, 217);
             this.grid_Empleados.TabIndex = 6;
             this.grid_Empleados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid_Empleados_CellContentClick);
@@ -209,22 +210,26 @@
             // 
             this.Nombre.HeaderText = "Nombre";
             this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
             // 
             // Apellido
             // 
             this.Apellido.HeaderText = "Apellido";
             this.Apellido.Name = "Apellido";
+            this.Apellido.ReadOnly = true;
             // 
             // tipo_documento
             // 
             this.tipo_documento.HeaderText = "Tipo_Dni";
             this.tipo_documento.Name = "tipo_documento";
+            this.tipo_documento.ReadOnly = true;
             // 
             // Nro_Documento
             // 
             this.Nro_Documento.FillWeight = 200F;
             this.Nro_Documento.HeaderText = "Nro_Documento";
             this.Nro_Documento.Name = "Nro_Documento";
+            this.Nro_Documento.ReadOnly = true;
             this.Nro_Documento.Width = 200;
             // 
             // legajo_empleado

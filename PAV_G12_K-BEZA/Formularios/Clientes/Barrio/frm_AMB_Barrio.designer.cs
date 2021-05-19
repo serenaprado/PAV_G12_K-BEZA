@@ -79,6 +79,8 @@
             // 
             // dgv_Barrio
             // 
+            this.dgv_Barrio.AllowUserToAddRows = false;
+            this.dgv_Barrio.AllowUserToDeleteRows = false;
             this.dgv_Barrio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Barrio.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.descripcion_barrio,
@@ -86,6 +88,7 @@
             this.id_localidad});
             this.dgv_Barrio.Location = new System.Drawing.Point(10, 109);
             this.dgv_Barrio.Name = "dgv_Barrio";
+            this.dgv_Barrio.ReadOnly = true;
             this.dgv_Barrio.Size = new System.Drawing.Size(396, 144);
             this.dgv_Barrio.TabIndex = 3;
             this.dgv_Barrio.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);

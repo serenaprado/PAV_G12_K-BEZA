@@ -153,6 +153,7 @@
             this.Column1});
             this.grid_Tipos.Location = new System.Drawing.Point(11, 174);
             this.grid_Tipos.Name = "grid_Tipos";
+            this.grid_Tipos.ReadOnly = true;
             this.grid_Tipos.Size = new System.Drawing.Size(401, 206);
             this.grid_Tipos.TabIndex = 6;
             this.grid_Tipos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid_Tipos_CellClick);
@@ -162,12 +163,14 @@
             // 
             this.id_tipo_producto.HeaderText = "id_tipo_producto";
             this.id_tipo_producto.Name = "id_tipo_producto";
+            this.id_tipo_producto.ReadOnly = true;
             this.id_tipo_producto.Width = 150;
             // 
             // Column1
             // 
             this.Column1.HeaderText = "Tipo_Producto";
             this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             this.Column1.Width = 200;
             // 
             // chk_Todos

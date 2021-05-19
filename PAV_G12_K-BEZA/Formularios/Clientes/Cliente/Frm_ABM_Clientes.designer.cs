@@ -95,6 +95,7 @@
             this.Column11});
             this.GridView_Client.Location = new System.Drawing.Point(6, 186);
             this.GridView_Client.Name = "GridView_Client";
+            this.GridView_Client.ReadOnly = true;
             this.GridView_Client.Size = new System.Drawing.Size(631, 185);
             this.GridView_Client.TabIndex = 7;
             this.GridView_Client.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridView_Client_CellClick);
@@ -104,56 +105,67 @@
             // 
             this.Column1.HeaderText = "Tipo Doc.";
             this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
             // Column2
             // 
             this.Column2.HeaderText = "Documento";
             this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "Apellido";
             this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
             // 
             // Column4
             // 
             this.Column4.HeaderText = "Nombre";
             this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
             // 
             // Column5
             // 
             this.Column5.HeaderText = "Fecha Nacimiento";
             this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
             // 
             // Column6
             // 
             this.Column6.HeaderText = "Sexo";
             this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
             // 
             // Column7
             // 
             this.Column7.HeaderText = "Telefono";
             this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
             // 
             // Column8
             // 
             this.Column8.HeaderText = "Mail";
             this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
             // 
             // Column9
             // 
             this.Column9.HeaderText = "Calle";
             this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
             // 
             // Column10
             // 
             this.Column10.HeaderText = "Nro. Calle";
             this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
             // 
             // Column11
             // 
             this.Column11.HeaderText = "Id Barrio";
             this.Column11.Name = "Column11";
+            this.Column11.ReadOnly = true;
             // 
             // button1
             // 

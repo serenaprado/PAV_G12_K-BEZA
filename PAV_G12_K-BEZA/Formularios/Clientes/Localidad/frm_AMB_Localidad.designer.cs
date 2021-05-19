@@ -82,6 +82,7 @@
             this.id_localidad});
             this.dgv_Localidad.Location = new System.Drawing.Point(78, 95);
             this.dgv_Localidad.Name = "dgv_Localidad";
+            this.dgv_Localidad.ReadOnly = true;
             this.dgv_Localidad.Size = new System.Drawing.Size(347, 144);
             this.dgv_Localidad.TabIndex = 3;
             this.dgv_Localidad.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
@@ -90,11 +91,13 @@
             // 
             this.descripcion_localidad.HeaderText = "Localidad";
             this.descripcion_localidad.Name = "descripcion_localidad";
+            this.descripcion_localidad.ReadOnly = true;
             // 
             // id_localidad
             // 
             this.id_localidad.HeaderText = "Id";
             this.id_localidad.Name = "id_localidad";
+            this.id_localidad.ReadOnly = true;
             this.id_localidad.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.id_localidad.Visible = false;
             // 

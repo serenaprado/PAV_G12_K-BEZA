@@ -158,6 +158,7 @@
             this.id_producto});
             this.grid_kit.Location = new System.Drawing.Point(31, 132);
             this.grid_kit.Name = "grid_kit";
+            this.grid_kit.ReadOnly = true;
             this.grid_kit.Size = new System.Drawing.Size(547, 217);
             this.grid_kit.TabIndex = 6;
             this.grid_kit.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid_Productos_CellContentClick);
@@ -166,12 +167,14 @@
             // 
             this.Column1.HeaderText = "Descripcion";
             this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             this.Column1.Width = 200;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "Precio";
             this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
             // 
             // id_producto
             // 

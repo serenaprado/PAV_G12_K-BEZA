@@ -62,6 +62,7 @@
             this.id_tipo_factura});
             this.dgv_TipoFactura.Location = new System.Drawing.Point(6, 138);
             this.dgv_TipoFactura.Name = "dgv_TipoFactura";
+            this.dgv_TipoFactura.ReadOnly = true;
             this.dgv_TipoFactura.Size = new System.Drawing.Size(469, 150);
             this.dgv_TipoFactura.TabIndex = 17;
             this.dgv_TipoFactura.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_TipoFactura_CellClick);
@@ -71,12 +72,14 @@
             this.descripcion_tipo_factura.FillWeight = 200F;
             this.descripcion_tipo_factura.HeaderText = "Tipo Factura";
             this.descripcion_tipo_factura.Name = "descripcion_tipo_factura";
+            this.descripcion_tipo_factura.ReadOnly = true;
             this.descripcion_tipo_factura.Width = 200;
             // 
             // id_tipo_factura
             // 
             this.id_tipo_factura.HeaderText = "id_tipo_factura";
             this.id_tipo_factura.Name = "id_tipo_factura";
+            this.id_tipo_factura.ReadOnly = true;
             this.id_tipo_factura.Visible = false;
             // 
             // txt_Tipo_Factura

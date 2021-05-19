@@ -64,6 +64,7 @@
             this.id_forma_pago});
             this.dgv_Forma_Pago.Location = new System.Drawing.Point(6, 148);
             this.dgv_Forma_Pago.Name = "dgv_Forma_Pago";
+            this.dgv_Forma_Pago.ReadOnly = true;
             this.dgv_Forma_Pago.Size = new System.Drawing.Size(394, 144);
             this.dgv_Forma_Pago.TabIndex = 17;
             this.dgv_Forma_Pago.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Forma_Pago_CellClick);
@@ -72,12 +73,14 @@
             // 
             this.descripcion_forma_pago.HeaderText = "Forma de Pago";
             this.descripcion_forma_pago.Name = "descripcion_forma_pago";
+            this.descripcion_forma_pago.ReadOnly = true;
             this.descripcion_forma_pago.Width = 150;
             // 
             // id_forma_pago
             // 
             this.id_forma_pago.HeaderText = "id_forma_pago";
             this.id_forma_pago.Name = "id_forma_pago";
+            this.id_forma_pago.ReadOnly = true;
             this.id_forma_pago.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.id_forma_pago.Visible = false;
             // 
