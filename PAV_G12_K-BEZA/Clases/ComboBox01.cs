@@ -50,5 +50,21 @@ namespace PAV_G12_K_BEZA.Clases
             this.ValueMember = edc.Value;
             this.DataSource = edc.Tabla;
         }
+
+        public void CargarCombo2(string Condicion)
+        {
+            string sql = "SELECT " + Pp_Pk + ", " + Pp_descripcion + " FROM " + Pp_tabla + Condicion;
+            this.DisplayMember = Pp_descripcion;
+            this.ValueMember = Pp_Pk;
+            this.DataSource = _BD.Ejecutar_Select(sql);
+            if (this.Pp_Coseleccion == true)
+            {
+                this.SelectedIndex = 0;
+            }
+            else
+            {
+                this.SelectedIndex = -1;
+            }
+        }
     }
 }

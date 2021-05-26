@@ -12,6 +12,7 @@ using PAV_G12_K_BEZA.Formularios.Stock.Tipo_Producto;
 using PAV_G12_K_BEZA.Formularios.Stock.Kit;
 using PAV_G12_K_BEZA.Formularios.Stock.Proveedor;
 using PAV_G12_K_BEZA.Formularios.Stock.Ubicacion;
+using PAV_G12_K_BEZA.Formularios.Stock.MovimientoStock;
 using PAV_G12_K_BEZA.Formularios.Stock;
 namespace PAV_G12_K_BEZA.Formularios.Stock
 {
@@ -55,6 +56,12 @@ namespace PAV_G12_K_BEZA.Formularios.Stock
         {
             frm_UbicacionProducto abmubicacion = new frm_UbicacionProducto();
             abmubicacion.ShowDialog();
+        }
+
+        private void btnMovStock_Click(object sender, EventArgs e)
+        {
+            frm_MovimientoStock movstock = new frm_MovimientoStock();
+            movstock.ShowDialog();
         }
     }
     

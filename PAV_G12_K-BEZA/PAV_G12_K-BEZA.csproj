@@ -396,6 +396,24 @@
     <Compile Include="Formularios\Stock\Kit\frm_ModificarKit.designer.cs">
       <DependentUpon>frm_ModificarKit.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Stock\MovimientoStock\frm_MovimientoStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Stock\MovimientoStock\frm_MovimientoStock.designer.cs">
+      <DependentUpon>frm_MovimientoStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Stock\MovimientoStock\AltaStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Stock\MovimientoStock\AltaStock.designer.cs">
+      <DependentUpon>AltaStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Stock\MovimientoStock\ModificarStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Stock\MovimientoStock\ModificarStock.designer.cs">
+      <DependentUpon>ModificarStock.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Stock\Productos\frm_ABM_Producto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -490,6 +508,7 @@
     <Compile Include="Negocio\NE_Productos.cs" />
     <Compile Include="Negocio\NE_Proveedores.cs" />
     <Compile Include="Negocio\NE_Rol_Empleado.cs" />
+    <Compile Include="Negocio\NE_Stock.cs" />
     <Compile Include="Negocio\NE_Tipo_doc.cs" />
     <Compile Include="Negocio\NE_Tipo_Factura.cs" />
     <Compile Include="Negocio\NE_UbicacionProducto.cs" />
@@ -669,6 +688,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Stock\Kit\frm_ModificarKit.resx">
       <DependentUpon>frm_ModificarKit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Stock\MovimientoStock\frm_MovimientoStock.resx">
+      <DependentUpon>frm_MovimientoStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Stock\MovimientoStock\AltaStock.resx">
+      <DependentUpon>AltaStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Stock\MovimientoStock\ModificarStock.resx">
+      <DependentUpon>ModificarStock.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Stock\Productos\frm_ABM_Producto.resx">
       <DependentUpon>frm_ABM_Producto.cs</DependentUpon>

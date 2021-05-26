@@ -90,6 +90,7 @@
             this.btnMovStock.TabIndex = 6;
             this.btnMovStock.Text = "MOVIMIENTO DE STOCK";
             this.btnMovStock.UseVisualStyleBackColor = true;
+            this.btnMovStock.Click += new System.EventHandler(this.btnMovStock_Click);
             // 
             // btnProveedor
             // 
