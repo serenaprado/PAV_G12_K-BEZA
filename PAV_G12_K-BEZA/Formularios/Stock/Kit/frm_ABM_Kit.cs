@@ -121,6 +121,25 @@ namespace PAV_G12_K_BEZA.Formularios.Stock.Kit
             Id_Kit = grid_kit.CurrentRow.Cells[2].Value.ToString();
         }
 
- 
+        private void btnAgregarProducto_Click(object sender, EventArgs e)
+        {
+            if (Id_Kit == "")
+            {
+                MessageBox.Show("Debe seleccionar un item de la grilla");
+                return;
+            }
+            frm_AltaProductoKit altaprodkit = new frm_AltaProductoKit();
+            altaprodkit.Id_kit = Id_Kit;
+            altaprodkit.ShowDialog();
+            grid_kit.Rows.Clear();
+            Id_Kit = "";
+        }
+
+        private void grid_kit_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            frm_ConsultaKit mostrar = new frm_ConsultaKit();
+            mostrar.Id_kit = grid_kit.CurrentRow.Cells[2].Value.ToString();
+            mostrar.ShowDialog();
+        }
     }
 }

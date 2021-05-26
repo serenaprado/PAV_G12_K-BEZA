@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnAgregarProducto = new System.Windows.Forms.Button();
             this.btn_Salir = new System.Windows.Forms.Button();
             this.btn_Eliminar = new System.Windows.Forms.Button();
             this.txt_Nombre = new PAV_G12_K_BEZA.Clases.TextBox01();
@@ -49,6 +50,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.btnAgregarProducto);
             this.groupBox1.Controls.Add(this.btn_Salir);
             this.groupBox1.Controls.Add(this.btn_Eliminar);
             this.groupBox1.Controls.Add(this.txt_Nombre);
@@ -67,6 +69,16 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Consultar Kits";
+            // 
+            // btnAgregarProducto
+            // 
+            this.btnAgregarProducto.Location = new System.Drawing.Point(200, 355);
+            this.btnAgregarProducto.Name = "btnAgregarProducto";
+            this.btnAgregarProducto.Size = new System.Drawing.Size(89, 50);
+            this.btnAgregarProducto.TabIndex = 8;
+            this.btnAgregarProducto.Text = "Agregar Productos";
+            this.btnAgregarProducto.UseVisualStyleBackColor = true;
+            this.btnAgregarProducto.Click += new System.EventHandler(this.btnAgregarProducto_Click);
             // 
             // btn_Salir
             // 
@@ -162,6 +174,7 @@
             this.grid_kit.Size = new System.Drawing.Size(547, 217);
             this.grid_kit.TabIndex = 6;
             this.grid_kit.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid_Productos_CellContentClick);
+            this.grid_kit.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid_kit_CellContentDoubleClick);
             // 
             // Column1
             // 
@@ -241,5 +254,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn id_producto;
+        private System.Windows.Forms.Button btnAgregarProducto;
     }
 }

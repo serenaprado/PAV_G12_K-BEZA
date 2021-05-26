@@ -360,11 +360,35 @@
     <Compile Include="Formularios\Stock\Kit\frm_AltaKit.designer.cs">
       <DependentUpon>frm_AltaKit.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Stock\Kit\frm_AltaProductoKit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Stock\Kit\frm_AltaProductoKit.Designer.cs">
+      <DependentUpon>frm_AltaProductoKit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Stock\Kit\frm_BorrarKit.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\Stock\Kit\frm_BorrarKit.designer.cs">
       <DependentUpon>frm_BorrarKit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Stock\Kit\frm_ConsultaKit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Stock\Kit\frm_ConsultaKit.Designer.cs">
+      <DependentUpon>frm_ConsultaKit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Stock\Kit\frm_BorrarProductoKit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Stock\Kit\frm_BorrarProductoKit.designer.cs">
+      <DependentUpon>frm_BorrarProductoKit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Stock\Kit\frm_ModificarProductoKit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Stock\Kit\frm_ModificarProductoKit.designer.cs">
+      <DependentUpon>frm_ModificarProductoKit.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Stock\Kit\frm_ModificarKit.cs">
       <SubType>Form</SubType>
@@ -628,8 +652,20 @@
     <EmbeddedResource Include="Formularios\Stock\Kit\frm_AltaKit.resx">
       <DependentUpon>frm_AltaKit.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Stock\Kit\frm_AltaProductoKit.resx">
+      <DependentUpon>frm_AltaProductoKit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Stock\Kit\frm_BorrarKit.resx">
       <DependentUpon>frm_BorrarKit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Stock\Kit\frm_ConsultaKit.resx">
+      <DependentUpon>frm_ConsultaKit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Stock\Kit\frm_BorrarProductoKit.resx">
+      <DependentUpon>frm_BorrarProductoKit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Stock\Kit\frm_ModificarProductoKit.resx">
+      <DependentUpon>frm_ModificarProductoKit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Stock\Kit\frm_ModificarKit.resx">
       <DependentUpon>frm_ModificarKit.cs</DependentUpon>
