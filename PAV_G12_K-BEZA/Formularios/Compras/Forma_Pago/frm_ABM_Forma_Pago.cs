@@ -53,9 +53,16 @@ namespace PAV_G12_K_BEZA.Formularios.Compras.Forma_Pago
 
         private void btn_Agregar_Click(object sender, EventArgs e)
         {
-            frm_A_Forma_Pago Alta = new frm_A_Forma_Pago();
-            Alta.ShowDialog();
-            dgv_Forma_Pago.Rows.Clear();
+            if (PAV_G12_K_BEZA.Inicio.id_perfil_actual > 3)
+            {
+                MessageBox.Show("No posee permisos necesarios para agregar.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                frm_A_Forma_Pago Alta = new frm_A_Forma_Pago();
+                Alta.ShowDialog();
+                dgv_Forma_Pago.Rows.Clear();
+            }
         }
 
         private void btn_Salir_Click(object sender, EventArgs e)
@@ -65,30 +72,42 @@ namespace PAV_G12_K_BEZA.Formularios.Compras.Forma_Pago
 
         private void btn_Modificar_Click(object sender, EventArgs e)
         {
-            if (Id_Forma_Pago == "")
+            if (PAV_G12_K_BEZA.Inicio.id_perfil_actual > 3)
             {
-                MessageBox.Show("Debe seleccionar un item de la grilla");
+                MessageBox.Show("No posee permisos necesarios para modificar.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-            frm_M_Forma_Pago Modificar = new frm_M_Forma_Pago();
-            Modificar.Id_Forma_Pago = Id_Forma_Pago;
-            Modificar.ShowDialog();
-            dgv_Forma_Pago.Rows.Clear();
-            
+            else
+            {
+                if (Id_Forma_Pago == "")
+                {
+                    MessageBox.Show("Debe seleccionar un item de la grilla");
+                }
+                frm_M_Forma_Pago Modificar = new frm_M_Forma_Pago();
+                Modificar.Id_Forma_Pago = Id_Forma_Pago;
+                Modificar.ShowDialog();
+                dgv_Forma_Pago.Rows.Clear();
+            }
         }
 
         private void btn_Eliminar_Click(object sender, EventArgs e)
         {
-            if (Id_Forma_Pago == "")
+            if (PAV_G12_K_BEZA.Inicio.id_perfil_actual > 3)
             {
-                MessageBox.Show("Debe seleccionar un item de la grilla");
+                MessageBox.Show("No posee permisos necesarios para borrar.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-            frm_B_Forma_Pago Borrar = new frm_B_Forma_Pago();
-            Borrar.Id_Forma_Pago = Id_Forma_Pago;
-            Borrar.ShowDialog();
-            dgv_Forma_Pago.Rows.Clear();
-            Id_Forma_Pago = "";
+            else
+            {
+                if (Id_Forma_Pago == "")
+                {
+                    MessageBox.Show("Debe seleccionar un item de la grilla");
+                }
+                frm_B_Forma_Pago Borrar = new frm_B_Forma_Pago();
+                Borrar.Id_Forma_Pago = Id_Forma_Pago;
+                Borrar.ShowDialog();
+                dgv_Forma_Pago.Rows.Clear();
+                Id_Forma_Pago = "";
+            }
         }
-
         private void frm_ABM_Forma_Pago_Load(object sender, EventArgs e)
         {
             Id_Forma_Pago = "";
@@ -97,7 +116,7 @@ namespace PAV_G12_K_BEZA.Formularios.Compras.Forma_Pago
         private void dgv_Forma_Pago_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             Id_Forma_Pago = dgv_Forma_Pago.CurrentRow.Cells["id_forma_pago"].Value.ToString();
-        
+
         }
 
         private void dgv_Forma_Pago_CellClick(object sender, DataGridViewCellEventArgs e)

@@ -17,6 +17,7 @@ namespace PAV_G12_K_BEZA
 {
     public partial class Inicio : Form
     {
+        public static int id_perfil_actual = 0;
         int id_usuario = 0;
         int id_empleado = 0;
         int id_perfil = 0;
@@ -28,14 +29,30 @@ namespace PAV_G12_K_BEZA
 
         private void btnClientes_Click(object sender, EventArgs e)
         {
-            frmClientes clientes = new frmClientes();
-            clientes.ShowDialog();
+            if (id_perfil_actual > 4)
+            {
+                MessageBox.Show("No posee permisos necesarios para ingresar.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+
+                frmClientes clientes = new frmClientes();
+                clientes.ShowDialog();
+            }
         }
 
         private void btnCompra_Click(object sender, EventArgs e)
         {
-            frmCompras compras = new frmCompras();
-            compras.ShowDialog();
+            if (id_perfil_actual > 4)
+            {
+                MessageBox.Show("No posee permisos necesarios para ingresar.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+
+                frmCompras compras = new frmCompras();
+                compras.ShowDialog();
+            }
         }
 
         private void btnStock_Click(object sender, EventArgs e)
@@ -46,8 +63,17 @@ namespace PAV_G12_K_BEZA
 
         private void btnEmpleados_Click(object sender, EventArgs e)
         {
-            frmEmpleados empleados = new frmEmpleados();
-            empleados.ShowDialog();
+            if (id_perfil_actual > 3)
+            {
+                MessageBox.Show("No posee permisos necesarios para ingresar.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+            }
+
+            else
+            {
+                frmEmpleados empleados = new frmEmpleados();
+                empleados.ShowDialog();
+            }
         }
 
         private void Inicio_Load(object sender, EventArgs e)
@@ -58,6 +84,9 @@ namespace PAV_G12_K_BEZA
             ne_usuario usuario = new ne_usuario();
             id_usuario = usuario.recuperar_id_usuario(login.Pp_usuario, login.Pp_contraseña);
             login.Dispose();
+
+            ne_usuario perfil_usuario = new ne_usuario();
+            id_perfil_actual = perfil_usuario.recuperar_id_perfil(login.Pp_usuario, login.Pp_contraseña);
         }
     }
 }

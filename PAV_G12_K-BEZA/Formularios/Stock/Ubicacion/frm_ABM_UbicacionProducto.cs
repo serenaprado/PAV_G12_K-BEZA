@@ -26,7 +26,7 @@ namespace PAV_G12_K_BEZA.Formularios.Stock.Ubicacion
 
         }
 
-        
+
 
         private void btn_Consultar_Click(object sender, EventArgs e)
         {
@@ -54,38 +54,60 @@ namespace PAV_G12_K_BEZA.Formularios.Stock.Ubicacion
 
         private void btn_Agregar_Click(object sender, EventArgs e)
         {
-            frm_A_Agregar Alta = new frm_A_Agregar();
-            Alta.ShowDialog();
-            dgv_UbicacionProducto.Rows.Clear();
+            if (PAV_G12_K_BEZA.Inicio.id_perfil_actual == 4)
+            {
+                MessageBox.Show("No posee permisos necesarios para agregar.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                frm_A_Agregar Alta = new frm_A_Agregar();
+                Alta.ShowDialog();
+                dgv_UbicacionProducto.Rows.Clear();
+            }
         }
 
         private void btn_Modificar_Click(object sender, EventArgs e)
         {
-            if (Id_Ubicacion=="")
+            if (PAV_G12_K_BEZA.Inicio.id_perfil_actual == 4)
             {
-                MessageBox.Show("Debe seleccionar un elemento de la grilla");
-                return;
+                MessageBox.Show("No posee permisos necesarios para modificar.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-            frm_M_Modificar modificar = new frm_M_Modificar();
-            modificar.Id_Ubicacion = Id_Ubicacion;
-            modificar.ShowDialog();
-            dgv_UbicacionProducto.Rows.Clear();
+            else
+            {
+                if (Id_Ubicacion == "")
+                {
+                    MessageBox.Show("Debe seleccionar un elemento de la grilla");
+                    return;
+                }
+                frm_M_Modificar modificar = new frm_M_Modificar();
+                modificar.Id_Ubicacion = Id_Ubicacion;
+                modificar.ShowDialog();
+                dgv_UbicacionProducto.Rows.Clear();
+            }
         }
 
         private void btn_Eliminar_Click(object sender, EventArgs e)
         {
-            if (Id_Ubicacion == "")
+            if (PAV_G12_K_BEZA.Inicio.id_perfil_actual == 4)
             {
-                MessageBox.Show("Debe seleccionar un elemento de la grilla");
-                return;
+                MessageBox.Show("No posee permisos necesarios para borrar.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-            frm_B_Eliminar Baja = new frm_B_Eliminar();
-            Baja.Id_Ubicacion = Id_Ubicacion;
-            Baja.ShowDialog();
-            dgv_UbicacionProducto.Rows.Clear();
-            Id_Ubicacion = "";
+            else
+            {
+                if (Id_Ubicacion == "")
+                {
+                    MessageBox.Show("Debe seleccionar un elemento de la grilla");
+                    return;
+                }
+                frm_B_Eliminar Baja = new frm_B_Eliminar();
+                Baja.Id_Ubicacion = Id_Ubicacion;
+                Baja.ShowDialog();
+                dgv_UbicacionProducto.Rows.Clear();
+                Id_Ubicacion = "";
+            }
         }
-        
+
+
 
         private void CargarGrilla(DataTable tabla)
         {
@@ -100,9 +122,9 @@ namespace PAV_G12_K_BEZA.Formularios.Stock.Ubicacion
 
         private void dgv_UbicacionProducto_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            
+
             Id_Ubicacion = dgv_UbicacionProducto.CurrentRow.Cells["id_ubicacion"].Value.ToString();
-            
+
         }
 
         private void txt_UbicacionProducto_TextChanged(object sender, EventArgs e)
@@ -119,7 +141,7 @@ namespace PAV_G12_K_BEZA.Formularios.Stock.Ubicacion
         {
             dgv_UbicacionProducto.Rows.Clear();
             txt_UbicacionProducto.Clear();
-            
+
         }
 
         private void frm_UbicacionProducto_Load(object sender, EventArgs e)

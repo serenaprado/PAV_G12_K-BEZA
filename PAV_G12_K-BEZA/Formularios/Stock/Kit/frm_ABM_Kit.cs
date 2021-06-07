@@ -23,7 +23,7 @@ namespace PAV_G12_K_BEZA.Formularios.Stock.Kit
             InitializeComponent();
         }
 
-        
+
 
         private void frm_ABM_Producto_Load(object sender, EventArgs e)
         {
@@ -34,7 +34,7 @@ namespace PAV_G12_K_BEZA.Formularios.Stock.Kit
         {
             grid_kit.Rows.Clear();
             txt_Nombre.Clear();
-            
+
         }
 
         private void btn_Consultar_Click(object sender, EventArgs e)
@@ -54,8 +54,8 @@ namespace PAV_G12_K_BEZA.Formularios.Stock.Kit
                     CargarGrilla(tabla);
                     return;
                 }
-                
-                
+
+
                 if (txt_Nombre.Text != "")
                 {
                     CargarGrilla(Kit.Recuprar_x_Patron(txt_Nombre.Text));
@@ -84,36 +84,56 @@ namespace PAV_G12_K_BEZA.Formularios.Stock.Kit
 
         private void btn_Insertar_Click(object sender, EventArgs e)
         {
-            frm_AltaKit alta = new frm_AltaKit();
-            alta.ShowDialog();
-            grid_kit.Rows.Clear();
+            if (PAV_G12_K_BEZA.Inicio.id_perfil_actual == 4)
+            {
+                MessageBox.Show("No posee permisos necesarios para agregar.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                frm_AltaKit alta = new frm_AltaKit();
+                alta.ShowDialog();
+                grid_kit.Rows.Clear();
+            }
         }
-
         private void btn_Eliminar_Click(object sender, EventArgs e)
         {
-            if (Id_Kit == "")
+            if (PAV_G12_K_BEZA.Inicio.id_perfil_actual == 4)
             {
-                MessageBox.Show("Debe seleccionar un item de la grilla");
-                return;
+                MessageBox.Show("No posee permisos necesarios para borrar.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-            frm_BorrarKit borrar = new frm_BorrarKit();
-            borrar.Id_kit = Id_Kit;
-            borrar.ShowDialog();
-            grid_kit.Rows.Clear();
-            Id_Kit = "";
+            else
+            {
+                if (Id_Kit == "")
+                {
+                    MessageBox.Show("Debe seleccionar un item de la grilla");
+                    return;
+                }
+                frm_BorrarKit borrar = new frm_BorrarKit();
+                borrar.Id_kit = Id_Kit;
+                borrar.ShowDialog();
+                grid_kit.Rows.Clear();
+                Id_Kit = "";
+            }
         }
 
         private void btn_Modificar_Click(object sender, EventArgs e)
         {
-            if (Id_Kit == "")
+            if (PAV_G12_K_BEZA.Inicio.id_perfil_actual == 4)
             {
-                MessageBox.Show("Debe seleccionar un item de la grilla");
-                return;
+                MessageBox.Show("No posee permisos necesarios para modificar.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-            frm_ModifcarKit modificar = new frm_ModifcarKit();
-            modificar.Id_kit = Id_Kit;
-            modificar.ShowDialog();
-            grid_kit.Rows.Clear();
+            else
+            {
+                if (Id_Kit == "")
+                {
+                    MessageBox.Show("Debe seleccionar un item de la grilla");
+                    return;
+                }
+                frm_ModifcarKit modificar = new frm_ModifcarKit();
+                modificar.Id_kit = Id_Kit;
+                modificar.ShowDialog();
+                grid_kit.Rows.Clear();
+            }
         }
 
         private void grid_Productos_CellContentClick(object sender, DataGridViewCellEventArgs e)

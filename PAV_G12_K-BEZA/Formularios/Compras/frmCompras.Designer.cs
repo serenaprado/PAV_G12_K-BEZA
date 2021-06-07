@@ -43,6 +43,7 @@
             this.btnCompra.TabIndex = 1;
             this.btnCompra.Text = "COMPRA";
             this.btnCompra.UseVisualStyleBackColor = true;
+            this.btnCompra.Click += new System.EventHandler(this.btnCompra_Click);
             // 
             // btnABMTipoFactura
             // 

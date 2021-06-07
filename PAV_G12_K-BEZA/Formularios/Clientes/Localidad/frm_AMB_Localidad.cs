@@ -15,7 +15,7 @@ namespace PAV_G12_K_BEZA.Formularios.Clientes.Localidad
     public partial class frm_AMB_Localidad : Form
     {
         public string Id_Localidad { get; set; }
-        
+
         public frm_AMB_Localidad()
         {
             InitializeComponent();
@@ -65,36 +65,57 @@ namespace PAV_G12_K_BEZA.Formularios.Clientes.Localidad
 
         private void btn_Agregar_Click(object sender, EventArgs e)
         {
-            frm_A_Localidad Alta = new frm_A_Localidad();
-            Alta.ShowDialog();
-            dgv_Localidad.Rows.Clear();
+            if (PAV_G12_K_BEZA.Inicio.id_perfil_actual > 3)
+            {
+                MessageBox.Show("No posee permisos necesarios para agregar.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                frm_A_Localidad Alta = new frm_A_Localidad();
+                Alta.ShowDialog();
+                dgv_Localidad.Rows.Clear();
+            }
         }
 
         private void btn_Modificar_Click(object sender, EventArgs e)
         {
-            if (Id_Localidad == "")
+            if (PAV_G12_K_BEZA.Inicio.id_perfil_actual > 3)
             {
-                MessageBox.Show("Debe seleccionar un item de la grilla");
-                return;
+                MessageBox.Show("No posee permisos necesarios para modificar.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-            frm_M_Localidad Modificar = new frm_M_Localidad();
-            Modificar.Id_Localidad = Id_Localidad;
-            Modificar.ShowDialog();
-            dgv_Localidad.Rows.Clear();
+            else
+            {
+                if (Id_Localidad == "")
+                {
+                    MessageBox.Show("Debe seleccionar un item de la grilla");
+                    return;
+                }
+                frm_M_Localidad Modificar = new frm_M_Localidad();
+                Modificar.Id_Localidad = Id_Localidad;
+                Modificar.ShowDialog();
+                dgv_Localidad.Rows.Clear();
+            }
         }
 
         private void btn_Eliminar_Click(object sender, EventArgs e)
         {
-            if (Id_Localidad == "")
+            if (PAV_G12_K_BEZA.Inicio.id_perfil_actual > 3)
             {
-                MessageBox.Show("Debe seleccionar un item de la grilla");
-                return;
+                MessageBox.Show("No posee permisos necesarios para borrar.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-            frm_B_Localidad Borrar = new frm_B_Localidad();
-            Borrar.Id_Localidad = Id_Localidad;
-            Borrar.ShowDialog();
-            dgv_Localidad.Rows.Clear();
-            Id_Localidad = "";
+            else
+            {
+                if (Id_Localidad == "")
+                {
+                    MessageBox.Show("Debe seleccionar un item de la grilla");
+                    return;
+                }
+                frm_B_Localidad Borrar = new frm_B_Localidad();
+                Borrar.Id_Localidad = Id_Localidad;
+                Borrar.ShowDialog();
+                dgv_Localidad.Rows.Clear();
+                Id_Localidad = "";
+            }
         }
 
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)

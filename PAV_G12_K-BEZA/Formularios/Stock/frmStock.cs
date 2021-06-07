@@ -13,7 +13,6 @@ using PAV_G12_K_BEZA.Formularios.Stock.Kit;
 using PAV_G12_K_BEZA.Formularios.Stock.Proveedor;
 using PAV_G12_K_BEZA.Formularios.Stock.Ubicacion;
 using PAV_G12_K_BEZA.Formularios.Stock.MovimientoStock;
-using PAV_G12_K_BEZA.Formularios.Stock;
 namespace PAV_G12_K_BEZA.Formularios.Stock
 {
     public partial class frmStock : Form
@@ -31,8 +30,15 @@ namespace PAV_G12_K_BEZA.Formularios.Stock
 
         private void btnABMTipoProducto_Click(object sender, EventArgs e)
         {
-            frm_ABM_Tipo_Producto abmtipoproducto = new frm_ABM_Tipo_Producto();
-            abmtipoproducto.ShowDialog();
+            if (PAV_G12_K_BEZA.Inicio.id_perfil_actual > 3)
+            {
+                MessageBox.Show("No posee permisos necesarios para ingresar.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                frm_ABM_Tipo_Producto abmtipoproducto = new frm_ABM_Tipo_Producto();
+                abmtipoproducto.ShowDialog();
+            }
         }
 
         private void btnABMKit_Click(object sender, EventArgs e)
@@ -43,8 +49,15 @@ namespace PAV_G12_K_BEZA.Formularios.Stock
 
         private void btnProveedor_Click(object sender, EventArgs e)
         {
-            Frm_ABM_Proveedores abmproveedor = new Frm_ABM_Proveedores();
-            abmproveedor.ShowDialog();
+            if (PAV_G12_K_BEZA.Inicio.id_perfil_actual == 4)
+            {
+                MessageBox.Show("No posee permisos necesarios para ingresar.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                Frm_ABM_Proveedores abmproveedor = new Frm_ABM_Proveedores();
+                abmproveedor.ShowDialog();
+            }
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -60,9 +73,9 @@ namespace PAV_G12_K_BEZA.Formularios.Stock
 
         private void btnMovStock_Click(object sender, EventArgs e)
         {
-            frm_MovimientoStock movstock = new frm_MovimientoStock();
-            movstock.ShowDialog();
+            frm_MovimientoStock mover = new frm_MovimientoStock();
+            mover.ShowDialog();
         }
     }
-    
+
 }

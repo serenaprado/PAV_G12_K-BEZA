@@ -23,8 +23,15 @@ namespace PAV_G12_K_BEZA.Formularios.Empleados
 
         private void btnPerfil_Click(object sender, EventArgs e)
         {
-            frm_ABM_Perfil abmperfil = new frm_ABM_Perfil();
-            abmperfil.ShowDialog();
+            if (PAV_G12_K_BEZA.Inicio.id_perfil_actual == 3)
+            {
+                MessageBox.Show("No posee permisos necesarios para ingresar.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                frm_ABM_Perfil abmperfil = new frm_ABM_Perfil();
+                abmperfil.ShowDialog();
+            }
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -51,3 +58,4 @@ namespace PAV_G12_K_BEZA.Formularios.Empleados
         }
     }
 }
+

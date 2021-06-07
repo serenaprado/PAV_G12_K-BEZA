@@ -120,5 +120,11 @@ namespace PAV_G12_K_BEZA.Clases
             }
         }
 
+        public string RecuperarFecha()
+        {
+            BE_AccesoDatos_T _BD = new BE_AccesoDatos_T();
+            return _BD.EjecutarSelect("select convert(char(10),getdate(),103)").Rows[0][0].ToString();
+        }
+
     }
 }

@@ -15,7 +15,7 @@ namespace PAV_G12_K_BEZA.Formularios.Clientes.Tipo_Documento
     public partial class frm_AMB_TipoDoc : Form
     {
         public string Id_tipodoc { get; set; }
-        
+
         public frm_AMB_TipoDoc()
         {
             InitializeComponent();
@@ -65,38 +65,58 @@ namespace PAV_G12_K_BEZA.Formularios.Clientes.Tipo_Documento
 
         private void btn_Agregar_Click(object sender, EventArgs e)
         {
-            frm_A_TipoDoc Alta = new frm_A_TipoDoc();
-            Alta.ShowDialog();
-            dgv_tipodoc.Rows.Clear();
+            if (PAV_G12_K_BEZA.Inicio.id_perfil_actual > 3)
+            {
+                MessageBox.Show("No posee permisos necesarios para agregar.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                frm_A_TipoDoc Alta = new frm_A_TipoDoc();
+                Alta.ShowDialog();
+                dgv_tipodoc.Rows.Clear();
+            }
         }
 
         private void btn_Modificar_Click(object sender, EventArgs e)
         {
-            if (Id_tipodoc == "")
+            if (PAV_G12_K_BEZA.Inicio.id_perfil_actual > 3)
             {
-                MessageBox.Show("Debe seleccionar un item de la grilla");
-                return;
+                MessageBox.Show("No posee permisos necesarios para modificar.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-            frm_M_TipoDoc Modificar = new frm_M_TipoDoc();
-            Modificar.Id_tipodoc = Id_tipodoc;
-            Modificar.ShowDialog();
-            dgv_tipodoc.Rows.Clear();
+            else
+            {
+                if (Id_tipodoc == "")
+                {
+                    MessageBox.Show("Debe seleccionar un item de la grilla");
+                    return;
+                }
+                frm_M_TipoDoc Modificar = new frm_M_TipoDoc();
+                Modificar.Id_tipodoc = Id_tipodoc;
+                Modificar.ShowDialog();
+                dgv_tipodoc.Rows.Clear();
+            }
         }
 
         private void btn_Eliminar_Click(object sender, EventArgs e)
         {
-            if (Id_tipodoc == "")
+            if (PAV_G12_K_BEZA.Inicio.id_perfil_actual > 3)
             {
-                MessageBox.Show("Debe seleccionar un item de la grilla");
-                return;
+                MessageBox.Show("No posee permisos necesarios para eliminar.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-            frm_B_TipoDoc Borrar = new frm_B_TipoDoc();
-            Borrar.Id_TipoDoc = Id_tipodoc;
-            Borrar.ShowDialog();
-            dgv_tipodoc.Rows.Clear();
-            Id_tipodoc = "";
+            else
+            {
+                if (Id_tipodoc == "")
+                {
+                    MessageBox.Show("Debe seleccionar un item de la grilla");
+                    return;
+                }
+                frm_B_TipoDoc Borrar = new frm_B_TipoDoc();
+                Borrar.Id_TipoDoc = Id_tipodoc;
+                Borrar.ShowDialog();
+                dgv_tipodoc.Rows.Clear();
+                Id_tipodoc = "";
+            }
         }
-
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
             Id_tipodoc = dgv_tipodoc.CurrentRow.Cells["id_tipodoc"].Value.ToString();

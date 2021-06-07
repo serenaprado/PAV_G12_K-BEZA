@@ -15,7 +15,7 @@ namespace PAV_G12_K_BEZA.Formularios.Compras.Tipo_Factura
     public partial class frm_ABM_Tipo_Factura : Form
     {
         public string Id_Tipo_Factura { get; set; }
-        
+
         public frm_ABM_Tipo_Factura()
         {
             InitializeComponent();
@@ -68,16 +68,24 @@ namespace PAV_G12_K_BEZA.Formularios.Compras.Tipo_Factura
 
         private void btn_Modificar_Click(object sender, EventArgs e)
         {
-            if (Id_Tipo_Factura == "")
+            if (PAV_G12_K_BEZA.Inicio.id_perfil_actual > 3)
             {
-                MessageBox.Show("Debe seleccionar un tipo de factura de la grilla");
-                return;
+                MessageBox.Show("No posee permisos necesarios para modificar.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-            frm_M_Modificar modificar = new frm_M_Modificar();
-            modificar.Id_Tipo_Factura = Id_Tipo_Factura;
-            modificar.ShowDialog();
-            dgv_TipoFactura.Rows.Clear();
+            else
+            {
+                if (Id_Tipo_Factura == "")
+                {
+                    MessageBox.Show("Debe seleccionar un tipo de factura de la grilla");
+                    return;
+                }
+                frm_M_Modificar modificar = new frm_M_Modificar();
+                modificar.Id_Tipo_Factura = Id_Tipo_Factura;
+                modificar.ShowDialog();
+                dgv_TipoFactura.Rows.Clear();
+            }
         }
+
 
         private void frm_ABM_Tipo_Factura_Load(object sender, EventArgs e)
         {
@@ -91,22 +99,36 @@ namespace PAV_G12_K_BEZA.Formularios.Compras.Tipo_Factura
 
         private void btn_Agregar_Click(object sender, EventArgs e)
         {
-            frm_A_Tipo_Factura Alta = new frm_A_Tipo_Factura();
-            Alta.ShowDialog();
-            dgv_TipoFactura.Rows.Clear();
+            if (PAV_G12_K_BEZA.Inicio.id_perfil_actual > 3)
+            {
+                MessageBox.Show("No posee permisos necesarios para agregar.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                frm_A_Tipo_Factura Alta = new frm_A_Tipo_Factura();
+                Alta.ShowDialog();
+                dgv_TipoFactura.Rows.Clear();
+            }
         }
 
         private void btn_Eliminar_Click(object sender, EventArgs e)
         {
-            if (Id_Tipo_Factura == "")
+            if (PAV_G12_K_BEZA.Inicio.id_perfil_actual > 3)
             {
-                MessageBox.Show("Debe seleccionar un item de la grilla");
+                MessageBox.Show("No posee permisos necesarios para borrar.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-            frm_B_Tipo_Factura Borrar = new frm_B_Tipo_Factura();
-            Borrar.Id_Tipo_Factura = Id_Tipo_Factura;
-            Borrar.ShowDialog();
-            dgv_TipoFactura.Rows.Clear();
-            Id_Tipo_Factura = "";
+            else
+            {
+                if (Id_Tipo_Factura == "")
+                {
+                    MessageBox.Show("Debe seleccionar un item de la grilla");
+                }
+                frm_B_Tipo_Factura Borrar = new frm_B_Tipo_Factura();
+                Borrar.Id_Tipo_Factura = Id_Tipo_Factura;
+                Borrar.ShowDialog();
+                dgv_TipoFactura.Rows.Clear();
+                Id_Tipo_Factura = "";
+            }
         }
     }
 }

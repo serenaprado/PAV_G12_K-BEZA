@@ -32,11 +32,18 @@ namespace PAV_G12_K_BEZA.Formularios.Stock.MovimientoStock
 
         private void btn_Aceptar_Click(object sender, EventArgs e)
         {
-            frm_AltaStock alta = new frm_AltaStock();
-            alta.ShowDialog();
-            cmb_Producto.SelectedIndex = -1;
-            cmb_Ubicacion.SelectedIndex = -1;
-            dgv_Stock.Rows.Clear();
+            if (PAV_G12_K_BEZA.Inicio.id_perfil_actual == 4)
+            {
+                MessageBox.Show("No posee permisos necesarios para agregar.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                frm_AltaStock alta = new frm_AltaStock();
+                alta.ShowDialog();
+                cmb_Producto.SelectedIndex = -1;
+                cmb_Ubicacion.SelectedIndex = -1;
+                dgv_Stock.Rows.Clear();
+            }
         }
 
         private void btn_Cancelar_Click(object sender, EventArgs e)
@@ -118,23 +125,29 @@ namespace PAV_G12_K_BEZA.Formularios.Stock.MovimientoStock
 
         private void btn_modificar_Click(object sender, EventArgs e)
         {
-            if (Id_ProductoStock == "" & Id_UbicacionStock == "")
+            if (PAV_G12_K_BEZA.Inicio.id_perfil_actual == 4)
             {
-                MessageBox.Show("Debe seleccionar un item de la grilla");
-                return;
+                MessageBox.Show("No posee permisos necesarios para modificar.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-            frm_ModificarStock modificar = new frm_ModificarStock();
-            modificar.Id_productoStock = Id_ProductoStock;
-            modificar.Id_ubicacionStock = Id_UbicacionStock;
-            //MessageBox.Show(modificar.Id_ubicacionStock + " - " + modificar.Id_productoStock);
-            //return;
-            modificar.ShowDialog();
-            cmb_Producto.SelectedIndex = -1;
-            cmb_Ubicacion.SelectedIndex = -1;
-            dgv_Stock.Rows.Clear();
-            
-        }
+            else
+            {
+                if (Id_ProductoStock == "" & Id_UbicacionStock == "")
+                {
+                    MessageBox.Show("Debe seleccionar un item de la grilla");
+                    return;
+                }
+                frm_ModificarStock modificar = new frm_ModificarStock();
+                modificar.Id_productoStock = Id_ProductoStock;
+                modificar.Id_ubicacionStock = Id_UbicacionStock;
+                //MessageBox.Show(modificar.Id_ubicacionStock + " - " + modificar.Id_productoStock);
+                //return;
+                modificar.ShowDialog();
+                cmb_Producto.SelectedIndex = -1;
+                cmb_Ubicacion.SelectedIndex = -1;
+                dgv_Stock.Rows.Clear();
 
+            }
+        }
         private void dgv_Stock_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             Id_ProductoStock = dgv_Stock.CurrentRow.Cells["id_producto"].Value.ToString();

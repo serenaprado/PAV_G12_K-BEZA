@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using PAV_G12_K_BEZA.Formularios.Compras.Forma_Pago;
 using PAV_G12_K_BEZA.Formularios.Compras.Tipo_Factura;
+using PAV_G12_K_BEZA.Formularios.Compras.TransaccionCompras;
 
 namespace PAV_G12_K_BEZA.Formularios.Compras
 {
@@ -35,5 +36,13 @@ namespace PAV_G12_K_BEZA.Formularios.Compras
             frm_ABM_Tipo_Factura abmtipofactura = new frm_ABM_Tipo_Factura();
             abmtipofactura.ShowDialog();
         }
+
+        private void btnCompra_Click(object sender, EventArgs e)
+        {
+            Frm_Compras transCompras = new Frm_Compras();
+            transCompras.ShowDialog();
+        }
     }
 }
+
+

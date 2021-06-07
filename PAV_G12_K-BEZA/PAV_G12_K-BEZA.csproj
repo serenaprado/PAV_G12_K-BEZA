@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases\BE_AccesoDatos.cs" />
+    <Compile Include="Clases\BE_AccesoDatos_T.cs" />
     <Compile Include="Clases\ComboBox01.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -215,6 +216,12 @@
     </Compile>
     <Compile Include="Formularios\Compras\Tipo_Factura\frm_M_Modificar.designer.cs">
       <DependentUpon>frm_M_Modificar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Compras\TransaccionesCompra\Frm_Compras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Compras\TransaccionesCompra\Frm_Compras.designer.cs">
+      <DependentUpon>Frm_Compras.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Empleados\Empleado\frm_ABM_Empleados.cs">
       <SubType>Form</SubType>
@@ -500,7 +507,9 @@
     </Compile>
     <Compile Include="Negocio\NE_Barrio.cs" />
     <Compile Include="Negocio\NE_Cliente.cs" />
+    <Compile Include="Negocio\NE_Compras.cs" />
     <Compile Include="Negocio\NE_Empleados.cs" />
+    <Compile Include="Negocio\NE_Factura.cs" />
     <Compile Include="Negocio\NE_Forma_Pago.cs" />
     <Compile Include="Negocio\NE_Kit.cs" />
     <Compile Include="Negocio\NE_Localidad.cs" />
@@ -598,6 +607,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Compras\Tipo_Factura\frm_M_Modificar.resx">
       <DependentUpon>frm_M_Modificar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Compras\TransaccionesCompra\Frm_Compras.resx">
+      <DependentUpon>Frm_Compras.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Empleados\Empleado\frm_ABM_Empleados.resx">
       <DependentUpon>frm_ABM_Empleados.cs</DependentUpon>

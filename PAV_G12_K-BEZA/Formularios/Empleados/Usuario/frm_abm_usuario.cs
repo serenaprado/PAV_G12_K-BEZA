@@ -70,23 +70,30 @@ namespace PAV_G12_K_BEZA.Formularios.Empleados.Usuario
 
             grid_usuarios.Rows.Clear();
 
-                for (int i = 0; i < tabla.Rows.Count; i++)
-                {
-                    grid_usuarios.Rows.Add();
-                    grid_usuarios.Rows[i].Cells[0].Value = tabla.Rows[i]["id_usuario"].ToString();
-                    grid_usuarios.Rows[i].Cells[1].Value = tabla.Rows[i]["usuario"].ToString();
-                    grid_usuarios.Rows[i].Cells[2].Value = tabla.Rows[i]["id_empleado"].ToString();
-                    grid_usuarios.Rows[i].Cells[3].Value = tabla.Rows[i]["id_perfil"].ToString();
-                    grid_usuarios.Rows[i].Cells[4].Value = tabla.Rows[i]["descripcion_perfil"].ToString();
-                    grid_usuarios.Rows[i].Cells["num_usuario"].Value = tabla.Rows[i]["id_usuario"].ToString();
-                }
+            for (int i = 0; i < tabla.Rows.Count; i++)
+            {
+                grid_usuarios.Rows.Add();
+                grid_usuarios.Rows[i].Cells[0].Value = tabla.Rows[i]["id_usuario"].ToString();
+                grid_usuarios.Rows[i].Cells[1].Value = tabla.Rows[i]["usuario"].ToString();
+                grid_usuarios.Rows[i].Cells[2].Value = tabla.Rows[i]["id_empleado"].ToString();
+                grid_usuarios.Rows[i].Cells[3].Value = tabla.Rows[i]["id_perfil"].ToString();
+                grid_usuarios.Rows[i].Cells[4].Value = tabla.Rows[i]["descripcion_perfil"].ToString();
+                grid_usuarios.Rows[i].Cells["num_usuario"].Value = tabla.Rows[i]["id_usuario"].ToString();
+            }
         }
 
         private void btn_alta_Click(object sender, EventArgs e)
         {
-            frm_alta_usuario alta = new frm_alta_usuario();
-            alta.ShowDialog();
-            grid_usuarios.Rows.Clear();
+            if (PAV_G12_K_BEZA.Inicio.id_perfil_actual == 3)
+            {
+                MessageBox.Show("No posee permisos necesarios para agregar.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                frm_alta_usuario alta = new frm_alta_usuario();
+                alta.ShowDialog();
+                grid_usuarios.Rows.Clear();
+            }
         }
 
         private void btn_salir_Click(object sender, EventArgs e)
@@ -101,15 +108,22 @@ namespace PAV_G12_K_BEZA.Formularios.Empleados.Usuario
 
         private void btn_modificar_Click(object sender, EventArgs e)
         {
-            if (ID_usuario == "")
+            if (PAV_G12_K_BEZA.Inicio.id_perfil_actual == 3)
             {
-                MessageBox.Show("Debe seleccionar un elemento de la grilla");
-                return;
+                MessageBox.Show("No posee permisos necesarios para modificar.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-            frm_modif_usuario modificar = new frm_modif_usuario();
-            modificar.ID_usuario = ID_usuario;
-            modificar.ShowDialog();
-            grid_usuarios.Rows.Clear();
+            else
+            {
+                if (ID_usuario == "")
+                {
+                    MessageBox.Show("Debe seleccionar un elemento de la grilla");
+                    return;
+                }
+                frm_modif_usuario modificar = new frm_modif_usuario();
+                modificar.ID_usuario = ID_usuario;
+                modificar.ShowDialog();
+                grid_usuarios.Rows.Clear();
+            }
         }
 
         private void grid_usuarios_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -121,16 +135,24 @@ namespace PAV_G12_K_BEZA.Formularios.Empleados.Usuario
 
         private void btn_borrar_Click(object sender, EventArgs e)
         {
-            if (ID_usuario == "")
+            if (PAV_G12_K_BEZA.Inicio.id_perfil_actual == 3)
             {
-                MessageBox.Show("Debe seleccionar un elemento de la grilla");
-                return;
+                MessageBox.Show("No posee permisos necesarios para borrar.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-            frm_borrar_usuario borrar = new frm_borrar_usuario();
-            borrar.ID_usuario = ID_usuario;
-            borrar.ShowDialog();
-            grid_usuarios.Rows.Clear();
-            ID_usuario = "";
+            else
+            {
+                if (ID_usuario == "")
+                {
+                    MessageBox.Show("Debe seleccionar un elemento de la grilla");
+                    return;
+                }
+                frm_borrar_usuario borrar = new frm_borrar_usuario();
+                borrar.ID_usuario = ID_usuario;
+                borrar.ShowDialog();
+                grid_usuarios.Rows.Clear();
+                ID_usuario = "";
+            }
         }
     }
 }
+

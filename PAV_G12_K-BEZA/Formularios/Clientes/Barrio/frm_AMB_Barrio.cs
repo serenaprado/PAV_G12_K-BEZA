@@ -67,36 +67,58 @@ namespace PAV_G12_K_BEZA.Formularios.Clientes.Barrio
 
         private void btn_Agregar_Click(object sender, EventArgs e)
         {
-            frm_A_Barrio Alta = new frm_A_Barrio();
-            Alta.ShowDialog();
-            dgv_Barrio.Rows.Clear();
+            if (PAV_G12_K_BEZA.Inicio.id_perfil_actual > 3)
+            {
+                MessageBox.Show("No posee permisos necesarios para agregar.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                frm_A_Barrio Alta = new frm_A_Barrio();
+                Alta.ShowDialog();
+                dgv_Barrio.Rows.Clear();
+            }
         }
 
         private void btn_Modificar_Click(object sender, EventArgs e)
         {
-            if (Id_Barrio=="")
+            if (PAV_G12_K_BEZA.Inicio.id_perfil_actual > 3)
             {
-                MessageBox.Show("Debe seleccionar un elemento de la grilla");
-                return;
+                MessageBox.Show("No posee permisos necesarios para modificar.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-            frm_M_Barrio Modificar = new frm_M_Barrio();
-            Modificar.Id_Barrio = Id_Barrio;
-            Modificar.ShowDialog();
-            dgv_Barrio.Rows.Clear();
+            else
+            {
+                if (Id_Barrio == "")
+                {
+                    MessageBox.Show("Debe seleccionar un elemento de la grilla");
+                    return;
+                }
+                frm_M_Barrio Modificar = new frm_M_Barrio();
+                Modificar.Id_Barrio = Id_Barrio;
+                Modificar.ShowDialog();
+                dgv_Barrio.Rows.Clear();
+            }
         }
+
 
         private void btn_Eliminar_Click(object sender, EventArgs e)
         {
-            if (Id_Barrio == "")
+            if (PAV_G12_K_BEZA.Inicio.id_perfil_actual > 3)
             {
-                MessageBox.Show("Debe seleccionar un elemento de la grilla");
-                return;
+                MessageBox.Show("No posee permisos necesarios para borrar.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-            frm_B_Barrio Borrar = new frm_B_Barrio();
-            Borrar.Id_Barrio = Id_Barrio;
-            Borrar.ShowDialog();
-            dgv_Barrio.Rows.Clear();
-            Id_Barrio = "";
+            else
+            {
+                if (Id_Barrio == "")
+                {
+                    MessageBox.Show("Debe seleccionar un elemento de la grilla");
+                    return;
+                }
+                frm_B_Barrio Borrar = new frm_B_Barrio();
+                Borrar.Id_Barrio = Id_Barrio;
+                Borrar.ShowDialog();
+                dgv_Barrio.Rows.Clear();
+                Id_Barrio = "";
+            }
         }
 
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)

@@ -43,7 +43,7 @@ namespace PAV_G12_K_BEZA.Formularios.Stock.Proveedor
                 CargarGrilla(tabla);
                 return;
             }
-            if (txt_apellido.Text != "" && txt_razonSocial.Text != "" ) 
+            if (txt_apellido.Text != "" && txt_razonSocial.Text != "")
             {
                 CargarGrilla(proveedores.Recuperar_x_apellidoYRazon(txt_apellido.Text, txt_razonSocial.Text));
                 return;
@@ -62,26 +62,26 @@ namespace PAV_G12_K_BEZA.Formularios.Stock.Proveedor
             {
                 MessageBox.Show("Debe cargar/seleccionar algun campo");
             }
-             
+
         }
         private void CargarGrilla(DataTable tabla)
         {
-           
-                grid_proveedores.Rows.Clear();
-            
-                for (int i = 0; i < tabla.Rows.Count; i++)
-                {
-                    grid_proveedores.Rows.Add();                    
-                    grid_proveedores.Rows[i].Cells[0].Value = tabla.Rows[i]["razon_social"].ToString();
-                    grid_proveedores.Rows[i].Cells[1].Value = tabla.Rows[i]["telefono"].ToString();
-                    grid_proveedores.Rows[i].Cells[2].Value = tabla.Rows[i]["apellido_contacto"].ToString();
-                    grid_proveedores.Rows[i].Cells[3].Value = tabla.Rows[i]["nombre_contacto"].ToString();
-                    grid_proveedores.Rows[i].Cells[4].Value = tabla.Rows[i]["calle"].ToString();
-                    grid_proveedores.Rows[i].Cells[5].Value = tabla.Rows[i]["nro_direccion"].ToString();
-                    grid_proveedores.Rows[i].Cells[6].Value = tabla.Rows[i]["nom_barrio"].ToString();
-                    grid_proveedores.Rows[i].Cells["id_proveedor"].Value = tabla.Rows[i]["id_proveedor"].ToString();
-                }
-            
+
+            grid_proveedores.Rows.Clear();
+
+            for (int i = 0; i < tabla.Rows.Count; i++)
+            {
+                grid_proveedores.Rows.Add();
+                grid_proveedores.Rows[i].Cells[0].Value = tabla.Rows[i]["razon_social"].ToString();
+                grid_proveedores.Rows[i].Cells[1].Value = tabla.Rows[i]["telefono"].ToString();
+                grid_proveedores.Rows[i].Cells[2].Value = tabla.Rows[i]["apellido_contacto"].ToString();
+                grid_proveedores.Rows[i].Cells[3].Value = tabla.Rows[i]["nombre_contacto"].ToString();
+                grid_proveedores.Rows[i].Cells[4].Value = tabla.Rows[i]["calle"].ToString();
+                grid_proveedores.Rows[i].Cells[5].Value = tabla.Rows[i]["nro_direccion"].ToString();
+                grid_proveedores.Rows[i].Cells[6].Value = tabla.Rows[i]["nom_barrio"].ToString();
+                grid_proveedores.Rows[i].Cells["id_proveedor"].Value = tabla.Rows[i]["id_proveedor"].ToString();
+            }
+
         }
 
         private void Frm_ABM_Proveedores_Load(object sender, EventArgs e)
@@ -122,17 +122,25 @@ namespace PAV_G12_K_BEZA.Formularios.Stock.Proveedor
 
         private void btn_borrar_Click(object sender, EventArgs e)
         {
-            if (Id_proveedor == "")
+            if ((PAV_G12_K_BEZA.Inicio.id_perfil_actual != 3) && (PAV_G12_K_BEZA.Inicio.id_perfil_actual != 2) && (PAV_G12_K_BEZA.Inicio.id_perfil_actual != 1))
             {
-                MessageBox.Show("Debe seleccionar un item de la grilla");
-                return;
+                MessageBox.Show("No posee permisos necesarios para borrar.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-            Frm_BorrarProveedores borrar = new Frm_BorrarProveedores();
-            borrar.Id_proveedor = Id_proveedor;
-            borrar.ShowDialog();
-            grid_proveedores.Rows.Clear();
-            Id_proveedor = "";
+            else
+            {
+                if (Id_proveedor == "")
+                {
+                    MessageBox.Show("Debe seleccionar un item de la grilla");
+                    return;
+                }
+                Frm_BorrarProveedores borrar = new Frm_BorrarProveedores();
+                borrar.Id_proveedor = Id_proveedor;
+                borrar.ShowDialog();
+                grid_proveedores.Rows.Clear();
+                Id_proveedor = "";
+            }
         }
+
 
         private void btn_Limpiar_Click(object sender, EventArgs e)
         {
