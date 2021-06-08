@@ -53,6 +53,8 @@
             this.btn_Modificar = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.label11 = new System.Windows.Forms.Label();
+            this.cmbProveedor = new PAV_G12_K_BEZA.Clases.ComboBox01();
+            this.label12 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txt_TiempoGarantia
@@ -315,11 +317,40 @@
             this.label11.TabIndex = 22;
             this.label11.Text = "MODIFICAR PRODUCTO";
             // 
+            // cmbProveedor
+            // 
+            this.cmbProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbProveedor.FormattingEnabled = true;
+            this.cmbProveedor.Location = new System.Drawing.Point(154, 413);
+            this.cmbProveedor.Name = "cmbProveedor";
+            this.cmbProveedor.Pp_Coseleccion = false;
+            this.cmbProveedor.Pp_descripcion = "razon_social";
+            this.cmbProveedor.Pp_MensajeError = "Debe Ingresar un Proveedor";
+            this.cmbProveedor.Pp_NombreCampo = "id_proveedor";
+            this.cmbProveedor.Pp_NombreTabla = null;
+            this.cmbProveedor.Pp_Pk = "id_proveedor";
+            this.cmbProveedor.Pp_tabla = "Proveedor";
+            this.cmbProveedor.Pp_Validable = true;
+            this.cmbProveedor.Size = new System.Drawing.Size(195, 28);
+            this.cmbProveedor.TabIndex = 24;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(67, 416);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(81, 20);
+            this.label12.TabIndex = 23;
+            this.label12.Text = "Proveedor";
+            // 
             // frm_ModiifcarProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(451, 433);
+            this.ClientSize = new System.Drawing.Size(451, 462);
+            this.Controls.Add(this.cmbProveedor);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.txt_TiempoGarantia);
             this.Controls.Add(this.txt_Alto);
@@ -381,5 +412,7 @@
         private System.Windows.Forms.Button btn_Cancelar;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Label label11;
+        private Clases.ComboBox01 cmbProveedor;
+        private System.Windows.Forms.Label label12;
     }
 }

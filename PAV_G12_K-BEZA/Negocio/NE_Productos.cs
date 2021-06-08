@@ -23,6 +23,7 @@ namespace PAV_G12_K_BEZA.Negocio
         public string Pp_alto { get; set; }
         public string Pp_tiempo_garantia { get; set; }
         public string Pp_id_producto { get; set; }
+        public string Pp_id_proveedor { get; set; }
 
 
         public enum ResultadoValidacion { exite, no_existe }
@@ -31,7 +32,9 @@ namespace PAV_G12_K_BEZA.Negocio
 
         public DataTable RecuperarTodos()
         {
-            string sql = @"Select * From Producto p JOIN Tipo_Producto tp ON (p.id_tipo_producto = tp.id_tipo_producto)";
+            string sql = @"Select * From Producto p 
+                                    INNER JOIN Tipo_Producto tp ON (p.id_tipo_producto = tp.id_tipo_producto)
+                                    LEFT JOIN Proveedor pr ON (pr.id_proveedor = p.id_proveedor)    ";
             return _BD.Ejecutar_Select(sql);
         }
 
@@ -71,7 +74,7 @@ namespace PAV_G12_K_BEZA.Negocio
         public void Insertar()
         {
             string sqlInsertar = @"Insert into Producto(descripcion, precio, id_tipo_producto, "
-                                + "color, material_principal, peso, largo, ancho, alto, tiempo_garantia)"
+                                + "color, material_principal, peso, largo, ancho, alto, tiempo_garantia, id_proveedor)"
                                 + " VALUES ("
                                 + "'" + Pp_descripcion + "'"
                                 + ", " + Pp_precio
@@ -82,7 +85,8 @@ namespace PAV_G12_K_BEZA.Negocio
                                 + ", '" + Pp_largo + "'"
                                 + ", '" + Pp_ancho + "'"
                                 + ", '" + Pp_alto + "'"
-                                + ", '" + Pp_tiempo_garantia + "')";
+                                + ", '" + Pp_tiempo_garantia + "'"
+                                + ", " + Pp_id_proveedor + ")";
             _BD.Insertar(sqlInsertar);
         }
 
@@ -105,6 +109,7 @@ namespace PAV_G12_K_BEZA.Negocio
                          + ", ancho = '" + Pp_ancho + "'"
                          + ", alto = '" + Pp_alto + "'"
                          + ", tiempo_garantia = '" + Pp_tiempo_garantia + "'"
+                         + ", id_proveedor = " + Pp_id_proveedor
                         + " WHERE id_producto = " + Pp_id_producto;
             _BD.Modificar(sqlModificar);
         }

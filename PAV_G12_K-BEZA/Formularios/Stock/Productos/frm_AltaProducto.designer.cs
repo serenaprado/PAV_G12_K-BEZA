@@ -51,6 +51,8 @@
             this.btn_Cancelar = new System.Windows.Forms.Button();
             this.btn_Aceptar = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.cmbProveedor = new PAV_G12_K_BEZA.Clases.ComboBox01();
             this.SuspendLayout();
             // 
             // txt_TiempoGarantia
@@ -312,11 +314,40 @@
             this.label11.TabIndex = 20;
             this.label11.Text = "NUEVO PRODUCTO";
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(77, 409);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(81, 20);
+            this.label12.TabIndex = 21;
+            this.label12.Text = "Proveedor";
+            // 
+            // cmbProveedor
+            // 
+            this.cmbProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbProveedor.FormattingEnabled = true;
+            this.cmbProveedor.Location = new System.Drawing.Point(164, 406);
+            this.cmbProveedor.Name = "cmbProveedor";
+            this.cmbProveedor.Pp_Coseleccion = false;
+            this.cmbProveedor.Pp_descripcion = "razon_social";
+            this.cmbProveedor.Pp_MensajeError = "Debe Ingresar un Proveedor";
+            this.cmbProveedor.Pp_NombreCampo = "id_proveedor";
+            this.cmbProveedor.Pp_NombreTabla = null;
+            this.cmbProveedor.Pp_Pk = "id_proveedor";
+            this.cmbProveedor.Pp_tabla = "Proveedor";
+            this.cmbProveedor.Pp_Validable = true;
+            this.cmbProveedor.Size = new System.Drawing.Size(195, 28);
+            this.cmbProveedor.TabIndex = 22;
+            // 
             // frm_AltaProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(456, 439);
+            this.ClientSize = new System.Drawing.Size(456, 467);
+            this.Controls.Add(this.cmbProveedor);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.txt_TiempoGarantia);
             this.Controls.Add(this.txt_Alto);
@@ -377,5 +408,7 @@
         private Clases.TextBox01 txt_Descripcion;
         private System.Windows.Forms.Button btn_Cancelar;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private Clases.ComboBox01 cmbProveedor;
     }
 }

@@ -51,6 +51,7 @@ namespace PAV_G12_K_BEZA.Formularios.Stock.Productos
             txt_Ancho.Text = tabla.Rows[0]["ancho"].ToString();
             txt_Alto.Text = tabla.Rows[0]["alto"].ToString();
             txt_TiempoGarantia.Text = tabla.Rows[0]["tiempo_garantia"].ToString();
+            cmbProveedor.SelectedValue = int.Parse(tabla.Rows[0]["id_proveedor"].ToString());
 
         }
 
@@ -77,6 +78,7 @@ namespace PAV_G12_K_BEZA.Formularios.Stock.Productos
         private void frm_BorrarProducto_Load(object sender, EventArgs e)
         {
             cmb_Tipos.CargarCombo();
+            cmbProveedor.CargarCombo();
             NE_Productos producto = new NE_Productos();
             MostrarDatos(producto.Recuperar_x_Id(Id_producto));
         }

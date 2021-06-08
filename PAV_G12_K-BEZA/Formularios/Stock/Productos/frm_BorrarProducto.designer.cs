@@ -28,17 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txt_TiempoGarantia = new PAV_G12_K_BEZA.Clases.TextBox01();
-            this.txt_Alto = new PAV_G12_K_BEZA.Clases.TextBox01();
-            this.txt_Ancho = new PAV_G12_K_BEZA.Clases.TextBox01();
-            this.txt_Largo = new PAV_G12_K_BEZA.Clases.TextBox01();
-            this.txt_Peso = new PAV_G12_K_BEZA.Clases.TextBox01();
-            this.txt_MaterialPrincipal = new PAV_G12_K_BEZA.Clases.TextBox01();
-            this.txt_Color = new PAV_G12_K_BEZA.Clases.TextBox01();
-            this.txt_Precio = new PAV_G12_K_BEZA.Clases.TextBox01();
-            this.txt_Descripcion = new PAV_G12_K_BEZA.Clases.TextBox01();
             this.label4 = new System.Windows.Forms.Label();
-            this.cmb_Tipos = new PAV_G12_K_BEZA.Clases.ComboBox01();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -51,160 +41,35 @@
             this.btn_Cancelar = new System.Windows.Forms.Button();
             this.btn_Modificar = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.cmbProveedor = new PAV_G12_K_BEZA.Clases.ComboBox01();
+            this.txt_TiempoGarantia = new PAV_G12_K_BEZA.Clases.TextBox01();
+            this.txt_Alto = new PAV_G12_K_BEZA.Clases.TextBox01();
+            this.txt_Ancho = new PAV_G12_K_BEZA.Clases.TextBox01();
+            this.txt_Largo = new PAV_G12_K_BEZA.Clases.TextBox01();
+            this.txt_Peso = new PAV_G12_K_BEZA.Clases.TextBox01();
+            this.txt_MaterialPrincipal = new PAV_G12_K_BEZA.Clases.TextBox01();
+            this.txt_Color = new PAV_G12_K_BEZA.Clases.TextBox01();
+            this.txt_Precio = new PAV_G12_K_BEZA.Clases.TextBox01();
+            this.txt_Descripcion = new PAV_G12_K_BEZA.Clases.TextBox01();
+            this.cmb_Tipos = new PAV_G12_K_BEZA.Clases.ComboBox01();
             this.SuspendLayout();
-            // 
-            // txt_TiempoGarantia
-            // 
-            this.txt_TiempoGarantia.Enabled = false;
-            this.txt_TiempoGarantia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_TiempoGarantia.Location = new System.Drawing.Point(164, 371);
-            this.txt_TiempoGarantia.Name = "txt_TiempoGarantia";
-            this.txt_TiempoGarantia.Pp_MensajeError = "Debe Ingresar Tiempo Garantia";
-            this.txt_TiempoGarantia.Pp_NombreCampo = "tiempo_garantia";
-            this.txt_TiempoGarantia.Pp_NombreTabla = "Producto";
-            this.txt_TiempoGarantia.Pp_Validable = true;
-            this.txt_TiempoGarantia.Size = new System.Drawing.Size(195, 26);
-            this.txt_TiempoGarantia.TabIndex = 9;
-            // 
-            // txt_Alto
-            // 
-            this.txt_Alto.Enabled = false;
-            this.txt_Alto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Alto.Location = new System.Drawing.Point(164, 340);
-            this.txt_Alto.Name = "txt_Alto";
-            this.txt_Alto.Pp_MensajeError = "Debe Ingresar Alto";
-            this.txt_Alto.Pp_NombreCampo = "alto";
-            this.txt_Alto.Pp_NombreTabla = "Producto";
-            this.txt_Alto.Pp_Validable = true;
-            this.txt_Alto.Size = new System.Drawing.Size(195, 26);
-            this.txt_Alto.TabIndex = 8;
-            // 
-            // txt_Ancho
-            // 
-            this.txt_Ancho.Enabled = false;
-            this.txt_Ancho.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Ancho.Location = new System.Drawing.Point(164, 302);
-            this.txt_Ancho.Name = "txt_Ancho";
-            this.txt_Ancho.Pp_MensajeError = "Debe Ingresar Ancho";
-            this.txt_Ancho.Pp_NombreCampo = "ancho";
-            this.txt_Ancho.Pp_NombreTabla = "Producto";
-            this.txt_Ancho.Pp_Validable = true;
-            this.txt_Ancho.Size = new System.Drawing.Size(195, 26);
-            this.txt_Ancho.TabIndex = 7;
-            // 
-            // txt_Largo
-            // 
-            this.txt_Largo.Enabled = false;
-            this.txt_Largo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Largo.Location = new System.Drawing.Point(164, 267);
-            this.txt_Largo.Name = "txt_Largo";
-            this.txt_Largo.Pp_MensajeError = "Debe Ingresar Largo";
-            this.txt_Largo.Pp_NombreCampo = "largo";
-            this.txt_Largo.Pp_NombreTabla = "Producto";
-            this.txt_Largo.Pp_Validable = true;
-            this.txt_Largo.Size = new System.Drawing.Size(195, 26);
-            this.txt_Largo.TabIndex = 6;
-            // 
-            // txt_Peso
-            // 
-            this.txt_Peso.Enabled = false;
-            this.txt_Peso.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Peso.Location = new System.Drawing.Point(164, 232);
-            this.txt_Peso.Name = "txt_Peso";
-            this.txt_Peso.Pp_MensajeError = "Debe Ingresar Peso";
-            this.txt_Peso.Pp_NombreCampo = "peso";
-            this.txt_Peso.Pp_NombreTabla = "Producto";
-            this.txt_Peso.Pp_Validable = true;
-            this.txt_Peso.Size = new System.Drawing.Size(195, 26);
-            this.txt_Peso.TabIndex = 5;
-            // 
-            // txt_MaterialPrincipal
-            // 
-            this.txt_MaterialPrincipal.Enabled = false;
-            this.txt_MaterialPrincipal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_MaterialPrincipal.Location = new System.Drawing.Point(164, 194);
-            this.txt_MaterialPrincipal.Name = "txt_MaterialPrincipal";
-            this.txt_MaterialPrincipal.Pp_MensajeError = "Debe Ingresar Material Principal";
-            this.txt_MaterialPrincipal.Pp_NombreCampo = "material_principal";
-            this.txt_MaterialPrincipal.Pp_NombreTabla = "Producto";
-            this.txt_MaterialPrincipal.Pp_Validable = true;
-            this.txt_MaterialPrincipal.Size = new System.Drawing.Size(195, 26);
-            this.txt_MaterialPrincipal.TabIndex = 4;
-            // 
-            // txt_Color
-            // 
-            this.txt_Color.Enabled = false;
-            this.txt_Color.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Color.Location = new System.Drawing.Point(164, 159);
-            this.txt_Color.Name = "txt_Color";
-            this.txt_Color.Pp_MensajeError = "Debe Ingresar un Color";
-            this.txt_Color.Pp_NombreCampo = "color";
-            this.txt_Color.Pp_NombreTabla = "Producto";
-            this.txt_Color.Pp_Validable = true;
-            this.txt_Color.Size = new System.Drawing.Size(195, 26);
-            this.txt_Color.TabIndex = 3;
-            this.txt_Color.TextChanged += new System.EventHandler(this.txt_Color_TextChanged);
-            // 
-            // txt_Precio
-            // 
-            this.txt_Precio.Enabled = false;
-            this.txt_Precio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Precio.Location = new System.Drawing.Point(164, 92);
-            this.txt_Precio.Name = "txt_Precio";
-            this.txt_Precio.Pp_MensajeError = "Debe Ingresar Precio";
-            this.txt_Precio.Pp_NombreCampo = "precio";
-            this.txt_Precio.Pp_NombreTabla = "Producto";
-            this.txt_Precio.Pp_Validable = true;
-            this.txt_Precio.Size = new System.Drawing.Size(195, 26);
-            this.txt_Precio.TabIndex = 1;
-            // 
-            // txt_Descripcion
-            // 
-            this.txt_Descripcion.Enabled = false;
-            this.txt_Descripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Descripcion.Location = new System.Drawing.Point(164, 57);
-            this.txt_Descripcion.Name = "txt_Descripcion";
-            this.txt_Descripcion.Pp_MensajeError = "Debe Ingresar Descripcion";
-            this.txt_Descripcion.Pp_NombreCampo = "descripcion";
-            this.txt_Descripcion.Pp_NombreTabla = "Producto";
-            this.txt_Descripcion.Pp_Validable = true;
-            this.txt_Descripcion.Size = new System.Drawing.Size(195, 26);
-            this.txt_Descripcion.TabIndex = 0;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(30, 374);
+            this.label4.Location = new System.Drawing.Point(32, 369);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(127, 20);
             this.label4.TabIndex = 5;
             this.label4.Text = "Tiempo Garantia";
             // 
-            // cmb_Tipos
-            // 
-            this.cmb_Tipos.Enabled = false;
-            this.cmb_Tipos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmb_Tipos.FormattingEnabled = true;
-            this.cmb_Tipos.Location = new System.Drawing.Point(164, 124);
-            this.cmb_Tipos.Name = "cmb_Tipos";
-            this.cmb_Tipos.Pp_Coseleccion = false;
-            this.cmb_Tipos.Pp_descripcion = "descripcion";
-            this.cmb_Tipos.Pp_MensajeError = "Debe Ingresar Tipo Producto";
-            this.cmb_Tipos.Pp_NombreCampo = null;
-            this.cmb_Tipos.Pp_NombreTabla = null;
-            this.cmb_Tipos.Pp_Pk = "id_tipo_producto";
-            this.cmb_Tipos.Pp_tabla = "Tipo_Producto";
-            this.cmb_Tipos.Pp_Validable = true;
-            this.cmb_Tipos.Size = new System.Drawing.Size(195, 28);
-            this.cmb_Tipos.TabIndex = 2;
-            this.cmb_Tipos.SelectedIndexChanged += new System.EventHandler(this.cmb_Tipos_SelectedIndexChanged);
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(121, 343);
+            this.label10.Location = new System.Drawing.Point(121, 337);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(37, 20);
             this.label10.TabIndex = 19;
@@ -322,11 +187,178 @@
             this.label11.TabIndex = 21;
             this.label11.Text = "BORRAR PRODUCTO";
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(77, 401);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(81, 20);
+            this.label12.TabIndex = 23;
+            this.label12.Text = "Proveedor";
+            // 
+            // cmbProveedor
+            // 
+            this.cmbProveedor.Enabled = false;
+            this.cmbProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbProveedor.FormattingEnabled = true;
+            this.cmbProveedor.Location = new System.Drawing.Point(165, 398);
+            this.cmbProveedor.Name = "cmbProveedor";
+            this.cmbProveedor.Pp_Coseleccion = false;
+            this.cmbProveedor.Pp_descripcion = "razon_social";
+            this.cmbProveedor.Pp_MensajeError = "Debe Ingresar un Proveedor";
+            this.cmbProveedor.Pp_NombreCampo = "id_proveedor";
+            this.cmbProveedor.Pp_NombreTabla = null;
+            this.cmbProveedor.Pp_Pk = "id_proveedor";
+            this.cmbProveedor.Pp_tabla = "Proveedor";
+            this.cmbProveedor.Pp_Validable = true;
+            this.cmbProveedor.Size = new System.Drawing.Size(195, 28);
+            this.cmbProveedor.TabIndex = 24;
+            // 
+            // txt_TiempoGarantia
+            // 
+            this.txt_TiempoGarantia.Enabled = false;
+            this.txt_TiempoGarantia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_TiempoGarantia.Location = new System.Drawing.Point(164, 366);
+            this.txt_TiempoGarantia.Name = "txt_TiempoGarantia";
+            this.txt_TiempoGarantia.Pp_MensajeError = "Debe Ingresar Tiempo Garantia";
+            this.txt_TiempoGarantia.Pp_NombreCampo = "tiempo_garantia";
+            this.txt_TiempoGarantia.Pp_NombreTabla = "Producto";
+            this.txt_TiempoGarantia.Pp_Validable = true;
+            this.txt_TiempoGarantia.Size = new System.Drawing.Size(195, 26);
+            this.txt_TiempoGarantia.TabIndex = 9;
+            // 
+            // txt_Alto
+            // 
+            this.txt_Alto.Enabled = false;
+            this.txt_Alto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Alto.Location = new System.Drawing.Point(164, 334);
+            this.txt_Alto.Name = "txt_Alto";
+            this.txt_Alto.Pp_MensajeError = "Debe Ingresar Alto";
+            this.txt_Alto.Pp_NombreCampo = "alto";
+            this.txt_Alto.Pp_NombreTabla = "Producto";
+            this.txt_Alto.Pp_Validable = true;
+            this.txt_Alto.Size = new System.Drawing.Size(195, 26);
+            this.txt_Alto.TabIndex = 8;
+            // 
+            // txt_Ancho
+            // 
+            this.txt_Ancho.Enabled = false;
+            this.txt_Ancho.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Ancho.Location = new System.Drawing.Point(164, 302);
+            this.txt_Ancho.Name = "txt_Ancho";
+            this.txt_Ancho.Pp_MensajeError = "Debe Ingresar Ancho";
+            this.txt_Ancho.Pp_NombreCampo = "ancho";
+            this.txt_Ancho.Pp_NombreTabla = "Producto";
+            this.txt_Ancho.Pp_Validable = true;
+            this.txt_Ancho.Size = new System.Drawing.Size(195, 26);
+            this.txt_Ancho.TabIndex = 7;
+            // 
+            // txt_Largo
+            // 
+            this.txt_Largo.Enabled = false;
+            this.txt_Largo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Largo.Location = new System.Drawing.Point(164, 267);
+            this.txt_Largo.Name = "txt_Largo";
+            this.txt_Largo.Pp_MensajeError = "Debe Ingresar Largo";
+            this.txt_Largo.Pp_NombreCampo = "largo";
+            this.txt_Largo.Pp_NombreTabla = "Producto";
+            this.txt_Largo.Pp_Validable = true;
+            this.txt_Largo.Size = new System.Drawing.Size(195, 26);
+            this.txt_Largo.TabIndex = 6;
+            // 
+            // txt_Peso
+            // 
+            this.txt_Peso.Enabled = false;
+            this.txt_Peso.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Peso.Location = new System.Drawing.Point(164, 232);
+            this.txt_Peso.Name = "txt_Peso";
+            this.txt_Peso.Pp_MensajeError = "Debe Ingresar Peso";
+            this.txt_Peso.Pp_NombreCampo = "peso";
+            this.txt_Peso.Pp_NombreTabla = "Producto";
+            this.txt_Peso.Pp_Validable = true;
+            this.txt_Peso.Size = new System.Drawing.Size(195, 26);
+            this.txt_Peso.TabIndex = 5;
+            // 
+            // txt_MaterialPrincipal
+            // 
+            this.txt_MaterialPrincipal.Enabled = false;
+            this.txt_MaterialPrincipal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_MaterialPrincipal.Location = new System.Drawing.Point(164, 194);
+            this.txt_MaterialPrincipal.Name = "txt_MaterialPrincipal";
+            this.txt_MaterialPrincipal.Pp_MensajeError = "Debe Ingresar Material Principal";
+            this.txt_MaterialPrincipal.Pp_NombreCampo = "material_principal";
+            this.txt_MaterialPrincipal.Pp_NombreTabla = "Producto";
+            this.txt_MaterialPrincipal.Pp_Validable = true;
+            this.txt_MaterialPrincipal.Size = new System.Drawing.Size(195, 26);
+            this.txt_MaterialPrincipal.TabIndex = 4;
+            // 
+            // txt_Color
+            // 
+            this.txt_Color.Enabled = false;
+            this.txt_Color.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Color.Location = new System.Drawing.Point(164, 159);
+            this.txt_Color.Name = "txt_Color";
+            this.txt_Color.Pp_MensajeError = "Debe Ingresar un Color";
+            this.txt_Color.Pp_NombreCampo = "color";
+            this.txt_Color.Pp_NombreTabla = "Producto";
+            this.txt_Color.Pp_Validable = true;
+            this.txt_Color.Size = new System.Drawing.Size(195, 26);
+            this.txt_Color.TabIndex = 3;
+            this.txt_Color.TextChanged += new System.EventHandler(this.txt_Color_TextChanged);
+            // 
+            // txt_Precio
+            // 
+            this.txt_Precio.Enabled = false;
+            this.txt_Precio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Precio.Location = new System.Drawing.Point(164, 92);
+            this.txt_Precio.Name = "txt_Precio";
+            this.txt_Precio.Pp_MensajeError = "Debe Ingresar Precio";
+            this.txt_Precio.Pp_NombreCampo = "precio";
+            this.txt_Precio.Pp_NombreTabla = "Producto";
+            this.txt_Precio.Pp_Validable = true;
+            this.txt_Precio.Size = new System.Drawing.Size(195, 26);
+            this.txt_Precio.TabIndex = 1;
+            // 
+            // txt_Descripcion
+            // 
+            this.txt_Descripcion.Enabled = false;
+            this.txt_Descripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Descripcion.Location = new System.Drawing.Point(164, 57);
+            this.txt_Descripcion.Name = "txt_Descripcion";
+            this.txt_Descripcion.Pp_MensajeError = "Debe Ingresar Descripcion";
+            this.txt_Descripcion.Pp_NombreCampo = "descripcion";
+            this.txt_Descripcion.Pp_NombreTabla = "Producto";
+            this.txt_Descripcion.Pp_Validable = true;
+            this.txt_Descripcion.Size = new System.Drawing.Size(195, 26);
+            this.txt_Descripcion.TabIndex = 0;
+            // 
+            // cmb_Tipos
+            // 
+            this.cmb_Tipos.Enabled = false;
+            this.cmb_Tipos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_Tipos.FormattingEnabled = true;
+            this.cmb_Tipos.Location = new System.Drawing.Point(164, 124);
+            this.cmb_Tipos.Name = "cmb_Tipos";
+            this.cmb_Tipos.Pp_Coseleccion = false;
+            this.cmb_Tipos.Pp_descripcion = "descripcion";
+            this.cmb_Tipos.Pp_MensajeError = "Debe Ingresar Tipo Producto";
+            this.cmb_Tipos.Pp_NombreCampo = null;
+            this.cmb_Tipos.Pp_NombreTabla = null;
+            this.cmb_Tipos.Pp_Pk = "id_tipo_producto";
+            this.cmb_Tipos.Pp_tabla = "Tipo_Producto";
+            this.cmb_Tipos.Pp_Validable = true;
+            this.cmb_Tipos.Size = new System.Drawing.Size(195, 28);
+            this.cmb_Tipos.TabIndex = 2;
+            this.cmb_Tipos.SelectedIndexChanged += new System.EventHandler(this.cmb_Tipos_SelectedIndexChanged);
+            // 
             // frm_BorrarProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(455, 414);
+            this.ClientSize = new System.Drawing.Size(455, 463);
+            this.Controls.Add(this.cmbProveedor);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.txt_TiempoGarantia);
             this.Controls.Add(this.txt_Alto);
@@ -387,5 +419,7 @@
         private Clases.TextBox01 txt_Descripcion;
         private System.Windows.Forms.Button btn_Cancelar;
         private System.Windows.Forms.Label label11;
+        private Clases.ComboBox01 cmbProveedor;
+        private System.Windows.Forms.Label label12;
     }
 }

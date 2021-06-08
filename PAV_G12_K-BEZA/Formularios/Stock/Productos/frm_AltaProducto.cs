@@ -57,6 +57,7 @@ namespace PAV_G12_K_BEZA.Formularios.Stock.Productos
                 producto.Pp_ancho = txt_Ancho.Text;
                 producto.Pp_alto = txt_Alto.Text;
                 producto.Pp_tiempo_garantia = txt_TiempoGarantia.Text;
+                producto.Pp_id_proveedor = cmbProveedor.SelectedValue.ToString();
 
                 DialogResult dialogResult = MessageBox.Show("¿Desea Insertar Estos Datos?", "Confirmacion", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
@@ -81,6 +82,7 @@ namespace PAV_G12_K_BEZA.Formularios.Stock.Productos
         private void frm_AltaProducto_Load(object sender, EventArgs e)
         {
             cmb_Tipos.CargarCombo();
+            cmbProveedor.CargarCombo();
         }
 
         private void txt_Color_TextChanged(object sender, EventArgs e)

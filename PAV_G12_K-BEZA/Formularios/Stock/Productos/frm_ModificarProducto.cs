@@ -42,6 +42,7 @@ namespace PAV_G12_K_BEZA.Formularios.Stock.Productos
         private void frm_ModificarProducto_Load(object sender, EventArgs e)
         {
             cmb_Tipos.CargarCombo();
+            cmbProveedor.CargarCombo();
             NE_Productos producto = new NE_Productos();
             MostrarDatos(producto.Recuperar_x_Id(Id_producto));
         }
@@ -58,6 +59,7 @@ namespace PAV_G12_K_BEZA.Formularios.Stock.Productos
             txt_Ancho.Text = tabla.Rows[0]["ancho"].ToString();
             txt_Alto.Text = tabla.Rows[0]["alto"].ToString();
             txt_TiempoGarantia.Text = tabla.Rows[0]["tiempo_garantia"].ToString();
+            cmbProveedor.SelectedValue = int.Parse(tabla.Rows[0]["id_proveedor"].ToString());
 
         }
 
@@ -80,7 +82,8 @@ namespace PAV_G12_K_BEZA.Formularios.Stock.Productos
                 producto.Pp_ancho = txt_Ancho.Text;
                 producto.Pp_alto = txt_Alto.Text;
                 producto.Pp_tiempo_garantia = txt_TiempoGarantia.Text;
-                
+                producto.Pp_id_proveedor = cmbProveedor.SelectedValue.ToString();
+
                 producto.Modificar();
                 MessageBox.Show("Se cambiaron los datos correctamente");
                 this.Close();
