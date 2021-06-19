@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ReporteClientesXBarrio" targetNamespace="http://tempuri.org/ReporteClientesXBarrio.xsd" xmlns:mstns="http://tempuri.org/ReporteClientesXBarrio.xsd" xmlns="http://tempuri.org/ReporteClientesXBarrio.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ReporteClientesXBarrio" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ReporteClientesXBarrio" msprop:Generator_UserDSName="ReporteClientesXBarrio">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ReporteClientesXBarrio" msprop:Generator_TableClassName="ReporteClientesXBarrioDataTable" msprop:Generator_TableVarName="tableReporteClientesXBarrio" msprop:Generator_RowChangedName="ReporteClientesXBarrioRowChanged" msprop:Generator_TablePropName="_ReporteClientesXBarrio" msprop:Generator_RowDeletingName="ReporteClientesXBarrioRowDeleting" msprop:Generator_RowChangingName="ReporteClientesXBarrioRowChanging" msprop:Generator_RowEvHandlerName="ReporteClientesXBarrioRowChangeEventHandler" msprop:Generator_RowDeletedName="ReporteClientesXBarrioRowDeleted" msprop:Generator_RowClassName="ReporteClientesXBarrioRow" msprop:Generator_UserTableName="ReporteClientesXBarrio" msprop:Generator_RowEvArgName="ReporteClientesXBarrioRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="descripcion_tipo_doc" msprop:Generator_ColumnVarNameInTable="columndescripcion_tipo_doc" msprop:Generator_ColumnPropNameInRow="descripcion_tipo_doc" msprop:Generator_ColumnPropNameInTable="descripcion_tipo_docColumn" msprop:Generator_UserColumnName="descripcion_tipo_doc" type="xs:string" minOccurs="0" />
+              <xs:element name="numero_documento" msprop:Generator_ColumnVarNameInTable="columnnumero_documento" msprop:Generator_ColumnPropNameInRow="numero_documento" msprop:Generator_ColumnPropNameInTable="numero_documentoColumn" msprop:Generator_UserColumnName="numero_documento" type="xs:string" minOccurs="0" />
+              <xs:element name="apellido" msprop:Generator_ColumnVarNameInTable="columnapellido" msprop:Generator_ColumnPropNameInRow="apellido" msprop:Generator_ColumnPropNameInTable="apellidoColumn" msprop:Generator_UserColumnName="apellido" type="xs:string" minOccurs="0" />
+              <xs:element name="nombre" msprop:Generator_ColumnVarNameInTable="columnnombre" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_UserColumnName="nombre" type="xs:string" minOccurs="0" />
+              <xs:element name="fecha_nacimiento" msprop:Generator_ColumnVarNameInTable="columnfecha_nacimiento" msprop:Generator_ColumnPropNameInRow="fecha_nacimiento" msprop:Generator_ColumnPropNameInTable="fecha_nacimientoColumn" msprop:Generator_UserColumnName="fecha_nacimiento" type="xs:string" minOccurs="0" />
+              <xs:element name="sexo" msprop:Generator_ColumnVarNameInTable="columnsexo" msprop:Generator_ColumnPropNameInRow="sexo" msprop:Generator_ColumnPropNameInTable="sexoColumn" msprop:Generator_UserColumnName="sexo" type="xs:string" minOccurs="0" />
+              <xs:element name="telefono" msprop:Generator_ColumnVarNameInTable="columntelefono" msprop:Generator_ColumnPropNameInRow="telefono" msprop:Generator_ColumnPropNameInTable="telefonoColumn" msprop:Generator_UserColumnName="telefono" type="xs:string" minOccurs="0" />
+              <xs:element name="mail" msprop:Generator_ColumnVarNameInTable="columnmail" msprop:Generator_ColumnPropNameInRow="mail" msprop:Generator_ColumnPropNameInTable="mailColumn" msprop:Generator_UserColumnName="mail" type="xs:string" minOccurs="0" />
+              <xs:element name="calle" msprop:Generator_ColumnVarNameInTable="columncalle" msprop:Generator_ColumnPropNameInRow="calle" msprop:Generator_ColumnPropNameInTable="calleColumn" msprop:Generator_UserColumnName="calle" type="xs:string" minOccurs="0" />
+              <xs:element name="nro_direccion" msprop:Generator_ColumnVarNameInTable="columnnro_direccion" msprop:Generator_ColumnPropNameInRow="nro_direccion" msprop:Generator_ColumnPropNameInTable="nro_direccionColumn" msprop:Generator_UserColumnName="nro_direccion" type="xs:string" minOccurs="0" />
+              <xs:element name="descripcion_barrio" msprop:Generator_ColumnVarNameInTable="columndescripcion_barrio" msprop:Generator_ColumnPropNameInRow="descripcion_barrio" msprop:Generator_ColumnPropNameInTable="descripcion_barrioColumn" msprop:Generator_UserColumnName="descripcion_barrio" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

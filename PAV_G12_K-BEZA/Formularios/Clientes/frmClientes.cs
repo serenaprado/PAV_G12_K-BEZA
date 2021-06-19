@@ -11,6 +11,7 @@ using PAV_G12_K_BEZA.Formularios.Clientes.Localidad;
 using PAV_G12_K_BEZA.Formularios.Clientes.Cliente;
 using PAV_G12_K_BEZA.Formularios.Clientes.Barrio;
 using PAV_G12_K_BEZA.Formularios.Clientes.Tipo_Documento;
+using PAV_G12_K_BEZA.Formularios.Clientes;
 
 namespace PAV_G12_K_BEZA.Formularios
 {
@@ -48,6 +49,12 @@ namespace PAV_G12_K_BEZA.Formularios
         {
             frm_AMB_TipoDoc abmtipodoc = new frm_AMB_TipoDoc();
             abmtipodoc.ShowDialog();
+        }
+
+        private void btnReportes_Click(object sender, EventArgs e)
+        {
+            frmReportesClientes reportes = new frmReportesClientes();
+            reportes.ShowDialog();
         }
     }
 }

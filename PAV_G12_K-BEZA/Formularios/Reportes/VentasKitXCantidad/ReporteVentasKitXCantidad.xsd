@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ReporteVentasKitXCantidad" targetNamespace="http://tempuri.org/ReporteVentasKitXCantidad.xsd" xmlns:mstns="http://tempuri.org/ReporteVentasKitXCantidad.xsd" xmlns="http://tempuri.org/ReporteVentasKitXCantidad.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ReporteVentasKitXCantidad" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ReporteVentasKitXCantidad" msprop:Generator_UserDSName="ReporteVentasKitXCantidad">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ReporteVentasKitXCantidad" msprop:Generator_TableClassName="ReporteVentasKitXCantidadDataTable" msprop:Generator_TableVarName="tableReporteVentasKitXCantidad" msprop:Generator_TablePropName="_ReporteVentasKitXCantidad" msprop:Generator_RowDeletingName="ReporteVentasKitXCantidadRowDeleting" msprop:Generator_RowChangingName="ReporteVentasKitXCantidadRowChanging" msprop:Generator_RowEvHandlerName="ReporteVentasKitXCantidadRowChangeEventHandler" msprop:Generator_RowDeletedName="ReporteVentasKitXCantidadRowDeleted" msprop:Generator_UserTableName="ReporteVentasKitXCantidad" msprop:Generator_RowChangedName="ReporteVentasKitXCantidadRowChanged" msprop:Generator_RowEvArgName="ReporteVentasKitXCantidadRowChangeEvent" msprop:Generator_RowClassName="ReporteVentasKitXCantidadRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="descripcion_tipo_factura" msprop:Generator_ColumnVarNameInTable="columndescripcion_tipo_factura" msprop:Generator_ColumnPropNameInRow="descripcion_tipo_factura" msprop:Generator_ColumnPropNameInTable="descripcion_tipo_facturaColumn" msprop:Generator_UserColumnName="descripcion_tipo_factura" type="xs:string" minOccurs="0" />
+              <xs:element name="numero_factura" msprop:Generator_ColumnVarNameInTable="columnnumero_factura" msprop:Generator_ColumnPropNameInRow="numero_factura" msprop:Generator_ColumnPropNameInTable="numero_facturaColumn" msprop:Generator_UserColumnName="numero_factura" type="xs:string" minOccurs="0" />
+              <xs:element name="fecha" msprop:Generator_ColumnVarNameInTable="columnfecha" msprop:Generator_ColumnPropNameInRow="fecha" msprop:Generator_ColumnPropNameInTable="fechaColumn" msprop:Generator_UserColumnName="fecha" type="xs:string" minOccurs="0" />
+              <xs:element name="descripcion_kit" msprop:Generator_ColumnVarNameInTable="columndescripcion_kit" msprop:Generator_ColumnPropNameInRow="descripcion_kit" msprop:Generator_ColumnPropNameInTable="descripcion_kitColumn" msprop:Generator_UserColumnName="descripcion_kit" type="xs:string" minOccurs="0" />
+              <xs:element name="cantidad" msprop:Generator_ColumnVarNameInTable="columncantidad" msprop:Generator_ColumnPropNameInRow="cantidad" msprop:Generator_ColumnPropNameInTable="cantidadColumn" msprop:Generator_UserColumnName="cantidad" type="xs:string" minOccurs="0" />
+              <xs:element name="total" msprop:Generator_ColumnVarNameInTable="columntotal" msprop:Generator_ColumnPropNameInRow="total" msprop:Generator_ColumnPropNameInTable="totalColumn" msprop:Generator_UserColumnName="total" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

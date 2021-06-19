@@ -25,19 +25,30 @@ namespace PAV_G12_K_BEZA.Negocio
 
         public DataTable RecuperarTodos()
         {
-            string sql = "Select p.*, b.descripcion_barrio as 'nom_barrio' FROM Proveedor p join barrio b on p.id_barrio = b.id_barrio";            
+            string sql = "Select p.*, b.descripcion_barrio as 'nom_barrio' FROM Proveedor p join barrio b on p.id_barrio = b.id_barrio";
             return _BD.Ejecutar_Select(sql);
         }
+        public DataTable ReporteProveedores_id(string id)
+        {
+            string sql = "Select id_proveedor, razon_social, telefono,apellido_contacto,nombre_contacto,calle,nro_direccion,id_barrio FROM Proveedor WHERE id_proveedor like '" + id.Trim() + "%'";
+            return _BD.Ejecutar_Select(sql);
+        }
+        public DataTable ReporteProveedores_Razon_social(string razon_social)
+        {
+            string sql = "Select id_proveedor, razon_social, telefono,apellido_contacto,nombre_contacto,calle,nro_direccion,id_barrio FROM Proveedor WHERE razon_social like '" + razon_social.Trim() + "%'";
+            return _BD.Ejecutar_Select(sql);
+        }
+
         public DataTable Recuperar_x_apellido(string apellido)
         {
-            string sql = @"Select p.*, b.descripcion_barrio as 'nom_barrio' FROM Proveedor p join" 
-                        +" barrio b on p.id_barrio = b.id_barrio where apellido_contacto like '%" + apellido.Trim() + "%'" ;
+            string sql = @"Select p.*, b.descripcion_barrio as 'nom_barrio' FROM Proveedor p join"
+                        + " barrio b on p.id_barrio = b.id_barrio where apellido_contacto like '%" + apellido.Trim() + "%'";
             return _BD.Ejecutar_Select(sql);
         }
         public DataTable Recuperar_x_apellidoYRazon(string apellido, string razon)
         {
             string sql = @"Select p.*, b.descripcion_barrio as 'nom_barrio' FROM Proveedor p join barrio b on p.id_barrio ="
-                        +" b.id_barrio where apellido_contacto like '%" + apellido.Trim() + "%' and razon_social like '%" + razon.Trim() + "%'";
+                        + " b.id_barrio where apellido_contacto like '%" + apellido.Trim() + "%' and razon_social like '%" + razon.Trim() + "%'";
             return _BD.Ejecutar_Select(sql);
         }
         public DataTable Recuperar_X_Razon(string razon)
@@ -57,7 +68,7 @@ namespace PAV_G12_K_BEZA.Negocio
                             + ", '" + Pp_calle + "' "
                             + "," + Pp_nro
                             + "," + Pp_barrio + ")";
-            
+
 
 
             _BD.Insertar(sqlInsertar);

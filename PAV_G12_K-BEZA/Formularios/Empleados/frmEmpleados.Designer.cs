@@ -32,8 +32,8 @@
             this.btnABMUsuario = new System.Windows.Forms.Button();
             this.btnABMRol = new System.Windows.Forms.Button();
             this.btnPerfil = new System.Windows.Forms.Button();
-            this.btnPermiso = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.btnReportes = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnABMEmpleado
@@ -61,7 +61,7 @@
             // btnABMRol
             // 
             this.btnABMRol.Font = new System.Drawing.Font("Agency FB", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnABMRol.Location = new System.Drawing.Point(574, 213);
+            this.btnABMRol.Location = new System.Drawing.Point(574, 176);
             this.btnABMRol.Name = "btnABMRol";
             this.btnABMRol.Size = new System.Drawing.Size(153, 47);
             this.btnABMRol.TabIndex = 7;
@@ -72,24 +72,13 @@
             // btnPerfil
             // 
             this.btnPerfil.Font = new System.Drawing.Font("Agency FB", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPerfil.Location = new System.Drawing.Point(574, 266);
+            this.btnPerfil.Location = new System.Drawing.Point(574, 229);
             this.btnPerfil.Name = "btnPerfil";
             this.btnPerfil.Size = new System.Drawing.Size(153, 47);
             this.btnPerfil.TabIndex = 8;
             this.btnPerfil.Text = "PERFIL";
             this.btnPerfil.UseVisualStyleBackColor = true;
             this.btnPerfil.Click += new System.EventHandler(this.btnPerfil_Click);
-            // 
-            // btnPermiso
-            // 
-            this.btnPermiso.Font = new System.Drawing.Font("Agency FB", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPermiso.Location = new System.Drawing.Point(574, 319);
-            this.btnPermiso.Name = "btnPermiso";
-            this.btnPermiso.Size = new System.Drawing.Size(153, 47);
-            this.btnPermiso.TabIndex = 9;
-            this.btnPermiso.Text = "PERMISO";
-            this.btnPermiso.UseVisualStyleBackColor = true;
-            this.btnPermiso.Visible = false;
             // 
             // btnSalir
             // 
@@ -102,6 +91,17 @@
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
+            // btnReportes
+            // 
+            this.btnReportes.Font = new System.Drawing.Font("Agency FB", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReportes.Location = new System.Drawing.Point(574, 282);
+            this.btnReportes.Name = "btnReportes";
+            this.btnReportes.Size = new System.Drawing.Size(153, 47);
+            this.btnReportes.TabIndex = 11;
+            this.btnReportes.Text = "REPORTES";
+            this.btnReportes.UseVisualStyleBackColor = true;
+            this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click);
+            // 
             // frmEmpleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -109,8 +109,8 @@
             this.BackgroundImage = global::PAV_G12_K_BEZA.Properties.Resources.Fondo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(757, 450);
+            this.Controls.Add(this.btnReportes);
             this.Controls.Add(this.btnSalir);
-            this.Controls.Add(this.btnPermiso);
             this.Controls.Add(this.btnPerfil);
             this.Controls.Add(this.btnABMRol);
             this.Controls.Add(this.btnABMUsuario);
@@ -128,7 +128,7 @@
         private System.Windows.Forms.Button btnABMUsuario;
         private System.Windows.Forms.Button btnABMRol;
         private System.Windows.Forms.Button btnPerfil;
-        private System.Windows.Forms.Button btnPermiso;
         private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Button btnReportes;
     }
 }

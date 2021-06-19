@@ -35,12 +35,13 @@
             this.btnMovStock = new System.Windows.Forms.Button();
             this.btnProveedor = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.btnReportes = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnABMProducto
             // 
             this.btnABMProducto.Font = new System.Drawing.Font("Agency FB", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnABMProducto.Location = new System.Drawing.Point(572, 31);
+            this.btnABMProducto.Location = new System.Drawing.Point(578, 12);
             this.btnABMProducto.Name = "btnABMProducto";
             this.btnABMProducto.Size = new System.Drawing.Size(153, 47);
             this.btnABMProducto.TabIndex = 2;
@@ -51,7 +52,7 @@
             // btnABMKit
             // 
             this.btnABMKit.Font = new System.Drawing.Font("Agency FB", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnABMKit.Location = new System.Drawing.Point(572, 84);
+            this.btnABMKit.Location = new System.Drawing.Point(578, 65);
             this.btnABMKit.Name = "btnABMKit";
             this.btnABMKit.Size = new System.Drawing.Size(153, 47);
             this.btnABMKit.TabIndex = 3;
@@ -62,7 +63,7 @@
             // btnABMTipoProducto
             // 
             this.btnABMTipoProducto.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnABMTipoProducto.Location = new System.Drawing.Point(572, 267);
+            this.btnABMTipoProducto.Location = new System.Drawing.Point(578, 224);
             this.btnABMTipoProducto.Name = "btnABMTipoProducto";
             this.btnABMTipoProducto.Size = new System.Drawing.Size(153, 47);
             this.btnABMTipoProducto.TabIndex = 4;
@@ -73,7 +74,7 @@
             // btnABMUbicacion
             // 
             this.btnABMUbicacion.Font = new System.Drawing.Font("Agency FB", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnABMUbicacion.Location = new System.Drawing.Point(572, 320);
+            this.btnABMUbicacion.Location = new System.Drawing.Point(578, 277);
             this.btnABMUbicacion.Name = "btnABMUbicacion";
             this.btnABMUbicacion.Size = new System.Drawing.Size(153, 47);
             this.btnABMUbicacion.TabIndex = 5;
@@ -84,7 +85,7 @@
             // btnMovStock
             // 
             this.btnMovStock.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMovStock.Location = new System.Drawing.Point(572, 137);
+            this.btnMovStock.Location = new System.Drawing.Point(578, 118);
             this.btnMovStock.Name = "btnMovStock";
             this.btnMovStock.Size = new System.Drawing.Size(153, 47);
             this.btnMovStock.TabIndex = 6;
@@ -95,7 +96,7 @@
             // btnProveedor
             // 
             this.btnProveedor.Font = new System.Drawing.Font("Agency FB", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProveedor.Location = new System.Drawing.Point(572, 190);
+            this.btnProveedor.Location = new System.Drawing.Point(578, 171);
             this.btnProveedor.Name = "btnProveedor";
             this.btnProveedor.Size = new System.Drawing.Size(153, 47);
             this.btnProveedor.TabIndex = 7;
@@ -114,6 +115,17 @@
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
+            // btnReportes
+            // 
+            this.btnReportes.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReportes.Location = new System.Drawing.Point(578, 330);
+            this.btnReportes.Name = "btnReportes";
+            this.btnReportes.Size = new System.Drawing.Size(153, 47);
+            this.btnReportes.TabIndex = 9;
+            this.btnReportes.Text = "REPORTES";
+            this.btnReportes.UseVisualStyleBackColor = true;
+            this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click);
+            // 
             // frmStock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -121,6 +133,7 @@
             this.BackgroundImage = global::PAV_G12_K_BEZA.Properties.Resources.Fondo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(758, 450);
+            this.Controls.Add(this.btnReportes);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnProveedor);
             this.Controls.Add(this.btnMovStock);
@@ -144,5 +157,6 @@
         private System.Windows.Forms.Button btnMovStock;
         private System.Windows.Forms.Button btnProveedor;
         private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Button btnReportes;
     }
 }

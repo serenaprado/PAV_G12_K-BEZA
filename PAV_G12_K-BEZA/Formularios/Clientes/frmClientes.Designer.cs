@@ -33,6 +33,7 @@
             this.btnABMBarrio = new System.Windows.Forms.Button();
             this.btnABMLocalidad = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.btnReportes = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnABMCliente
@@ -49,7 +50,7 @@
             // btnABMTipoDoc
             // 
             this.btnABMTipoDoc.Font = new System.Drawing.Font("Agency FB", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnABMTipoDoc.Location = new System.Drawing.Point(574, 215);
+            this.btnABMTipoDoc.Location = new System.Drawing.Point(574, 170);
             this.btnABMTipoDoc.Name = "btnABMTipoDoc";
             this.btnABMTipoDoc.Size = new System.Drawing.Size(153, 47);
             this.btnABMTipoDoc.TabIndex = 1;
@@ -60,7 +61,7 @@
             // btnABMBarrio
             // 
             this.btnABMBarrio.Font = new System.Drawing.Font("Agency FB", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnABMBarrio.Location = new System.Drawing.Point(574, 268);
+            this.btnABMBarrio.Location = new System.Drawing.Point(574, 223);
             this.btnABMBarrio.Name = "btnABMBarrio";
             this.btnABMBarrio.Size = new System.Drawing.Size(153, 47);
             this.btnABMBarrio.TabIndex = 2;
@@ -71,7 +72,7 @@
             // btnABMLocalidad
             // 
             this.btnABMLocalidad.Font = new System.Drawing.Font("Agency FB", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnABMLocalidad.Location = new System.Drawing.Point(574, 321);
+            this.btnABMLocalidad.Location = new System.Drawing.Point(574, 276);
             this.btnABMLocalidad.Name = "btnABMLocalidad";
             this.btnABMLocalidad.Size = new System.Drawing.Size(153, 47);
             this.btnABMLocalidad.TabIndex = 3;
@@ -90,6 +91,17 @@
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
+            // btnReportes
+            // 
+            this.btnReportes.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReportes.Location = new System.Drawing.Point(574, 329);
+            this.btnReportes.Name = "btnReportes";
+            this.btnReportes.Size = new System.Drawing.Size(153, 47);
+            this.btnReportes.TabIndex = 7;
+            this.btnReportes.Text = "REPORTES";
+            this.btnReportes.UseVisualStyleBackColor = true;
+            this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click);
+            // 
             // frmClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -97,6 +109,7 @@
             this.BackgroundImage = global::PAV_G12_K_BEZA.Properties.Resources.Fondo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(758, 450);
+            this.Controls.Add(this.btnReportes);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnABMLocalidad);
             this.Controls.Add(this.btnABMBarrio);
@@ -116,5 +129,6 @@
         private System.Windows.Forms.Button btnABMBarrio;
         private System.Windows.Forms.Button btnABMLocalidad;
         private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Button btnReportes;
     }
 }

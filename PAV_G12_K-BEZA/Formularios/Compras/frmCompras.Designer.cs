@@ -32,6 +32,7 @@
             this.btnABMTipoFactura = new System.Windows.Forms.Button();
             this.btnABMFormaPago = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.btnReportes = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnCompra
@@ -48,7 +49,7 @@
             // btnABMTipoFactura
             // 
             this.btnABMTipoFactura.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnABMTipoFactura.Location = new System.Drawing.Point(572, 263);
+            this.btnABMTipoFactura.Location = new System.Drawing.Point(572, 210);
             this.btnABMTipoFactura.Name = "btnABMTipoFactura";
             this.btnABMTipoFactura.Size = new System.Drawing.Size(153, 47);
             this.btnABMTipoFactura.TabIndex = 2;
@@ -59,7 +60,7 @@
             // btnABMFormaPago
             // 
             this.btnABMFormaPago.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnABMFormaPago.Location = new System.Drawing.Point(572, 316);
+            this.btnABMFormaPago.Location = new System.Drawing.Point(572, 263);
             this.btnABMFormaPago.Name = "btnABMFormaPago";
             this.btnABMFormaPago.Size = new System.Drawing.Size(153, 47);
             this.btnABMFormaPago.TabIndex = 3;
@@ -78,6 +79,17 @@
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
+            // btnReportes
+            // 
+            this.btnReportes.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReportes.Location = new System.Drawing.Point(572, 316);
+            this.btnReportes.Name = "btnReportes";
+            this.btnReportes.Size = new System.Drawing.Size(153, 47);
+            this.btnReportes.TabIndex = 6;
+            this.btnReportes.Text = "REPORTES";
+            this.btnReportes.UseVisualStyleBackColor = true;
+            this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click);
+            // 
             // frmCompras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -85,6 +97,7 @@
             this.BackgroundImage = global::PAV_G12_K_BEZA.Properties.Resources.Fondo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(758, 450);
+            this.Controls.Add(this.btnReportes);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnABMFormaPago);
             this.Controls.Add(this.btnABMTipoFactura);
@@ -102,5 +115,6 @@
         private System.Windows.Forms.Button btnABMTipoFactura;
         private System.Windows.Forms.Button btnABMFormaPago;
         private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Button btnReportes;
     }
 }

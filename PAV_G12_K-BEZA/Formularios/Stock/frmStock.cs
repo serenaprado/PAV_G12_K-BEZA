@@ -76,6 +76,12 @@ namespace PAV_G12_K_BEZA.Formularios.Stock
             frm_MovimientoStock mover = new frm_MovimientoStock();
             mover.ShowDialog();
         }
+
+        private void btnReportes_Click(object sender, EventArgs e)
+        {
+            frmReportesStock reportes = new frmReportesStock();
+            reportes.ShowDialog();
+        }
     }
 
 }

@@ -63,6 +63,16 @@ namespace PAV_G12_K_BEZA.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _13 {
+            get {
+                object obj = ResourceManager.GetObject("13", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Aceptar {
             get {
                 object obj = ResourceManager.GetObject("Aceptar", resourceCulture);
@@ -106,6 +116,36 @@ namespace PAV_G12_K_BEZA.Properties {
         internal static System.Drawing.Bitmap Fondo {
             get {
                 object obj = ResourceManager.GetObject("Fondo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_206684_visa_method_card_payment_icon_128px {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_206684_visa_method_card_payment_icon_128px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_4781825_cash_credit_currency_dollar_finance_icon_128px {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_4781825_cash_credit_currency_dollar_finance_icon_128px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_70593_mastercard_curved_icon_128px {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_70593_mastercard_curved_icon_128px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

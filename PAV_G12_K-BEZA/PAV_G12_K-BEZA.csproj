@@ -8,9 +8,10 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>PAV_G12_K_BEZA</RootNamespace>
     <AssemblyName>PAV_G12_K-BEZA</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -32,6 +33,24 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.1016.290\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -45,6 +64,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BD3K6G12_2021DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BD3K6G12_2021DataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Clases\BE_AccesoDatos.cs" />
     <Compile Include="Clases\BE_AccesoDatos_T.cs" />
     <Compile Include="Clases\ComboBox01.cs">
@@ -114,6 +138,12 @@
     </Compile>
     <Compile Include="Formularios\Clientes\frmClientes.Designer.cs">
       <DependentUpon>frmClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Clientes\frmReportesClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Clientes\frmReportesClientes.Designer.cs">
+      <DependentUpon>frmReportesClientes.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Clientes\Localidad\frm_AMB_Localidad.cs">
       <SubType>Form</SubType>
@@ -193,6 +223,12 @@
     <Compile Include="Formularios\Compras\frmCompras.Designer.cs">
       <DependentUpon>frmCompras.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Compras\frmReportesCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Compras\frmReportesCompras.Designer.cs">
+      <DependentUpon>frmReportesCompras.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Compras\Tipo_Factura\frm_ABM_Tipo_Factura.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -258,6 +294,12 @@
     </Compile>
     <Compile Include="Formularios\Empleados\frmEmpleados.Designer.cs">
       <DependentUpon>frmEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Empleados\frmReportesEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Empleados\frmReportesEmpleados.Designer.cs">
+      <DependentUpon>frmReportesEmpleados.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Empleados\Perfil\frm_ABM_Perfil.cs">
       <SubType>Form</SubType>
@@ -348,6 +390,222 @@
     </Compile>
     <Compile Include="Formularios\Inicio.Designer.cs">
       <DependentUpon>Inicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\ClientesXBarrio\frm_ReporteClientesXBarrio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\ClientesXBarrio\frm_ReporteClientesXBarrio.Designer.cs">
+      <DependentUpon>frm_ReporteClientesXBarrio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\ClientesXBarrio\ReporteClientesXBarrio.cs">
+      <DependentUpon>ReporteClientesXBarrio.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\ClientesXBarrio\ReporteClientesXBarrio.Designer.cs">
+      <DependentUpon>ReporteClientesXBarrio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\ClientesXBarrio\ReporteClientesXBarrio1.Designer.cs">
+      <DependentUpon>ReporteClientesXBarrio.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Formularios\Reportes\ClientesXEdad\frm_ReporteClienteXEdad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\ClientesXEdad\frm_ReporteClienteXEdad.Designer.cs">
+      <DependentUpon>frm_ReporteClienteXEdad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\ClientesXEdad\ReporteClientesXEdad.Designer.cs" />
+    <Compile Include="Formularios\Reportes\ClientesXEdad\ReporteClientesXEdad1.Designer.cs">
+      <DependentUpon>ReporteClientesXEdad.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Formularios\Reportes\ClientesXLocalidad\frm_clientesxlocalicad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\ClientesXLocalidad\frm_clientesxlocalicad.Designer.cs">
+      <DependentUpon>frm_clientesxlocalicad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\ClientesXLocalidad\ReporteClientesXLocalidad.cs">
+      <DependentUpon>ReporteClientesXLocalidad.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\ClientesXLocalidad\ReporteClientesXLocalidad.Designer.cs">
+      <DependentUpon>ReporteClientesXLocalidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\ClientesXLocalidad\ReporteClientesXLocalidad1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReporteClientesXLocalidad.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\CompraMayorA\ListadoVentasMayorA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\CompraMayorA\ListadoVentasMayorA.designer.cs">
+      <DependentUpon>ListadoVentasMayorA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\CompraMayorA\VentasMayoresA.cs">
+      <DependentUpon>VentasMayoresA.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\CompraMayorA\VentasMayoresA.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VentasMayoresA.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\ListadoEmpleadoXRol\FrmReporteEmpleadoXRol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\ListadoEmpleadoXRol\FrmReporteEmpleadoXRol.Designer.cs">
+      <DependentUpon>FrmReporteEmpleadoXRol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\ListadoEmpleadoXRol\ReporteEmpeladoXRol.cs">
+      <DependentUpon>ReporteEmpeladoXRol.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\ListadoEmpleadoXRol\ReporteEmpeladoXRol.Designer.cs">
+      <DependentUpon>ReporteEmpeladoXRol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\ListadoEmpleadoXRol\ReporteEmpeladoXRol1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReporteEmpeladoXRol.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\ListadoProductosXDeposito\FrmReporteProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\ListadoProductosXDeposito\FrmReporteProducto.Designer.cs">
+      <DependentUpon>FrmReporteProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\ListadoProductosXDeposito\ReporteProductoXDeposito.cs">
+      <DependentUpon>ReporteProductoXDeposito.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\ListadoProductosXDeposito\ReporteProductoXDeposito.Designer.cs">
+      <DependentUpon>ReporteProductoXDeposito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\ListadoProductosXDeposito\ReporteProductoXDeposito1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReporteProductoXDeposito.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\ListadoVentaXBarrio\FrmReporteVentasXBarrio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\ListadoVentaXBarrio\FrmReporteVentasXBarrio.Designer.cs">
+      <DependentUpon>FrmReporteVentasXBarrio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\ListadoVentaXBarrio\ReporteVentaBarrio.cs">
+      <DependentUpon>ReporteVentaBarrio.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\ListadoVentaXBarrio\ReporteVentaBarrio.Designer.cs">
+      <DependentUpon>ReporteVentaBarrio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\ListadoVentaXBarrio\ReporteVentaBarrio1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReporteVentaBarrio.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\ProductosXCantidad\frm_ReporteCantidadProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\ProductosXCantidad\frm_ReporteCantidadProductos.Designer.cs">
+      <DependentUpon>frm_ReporteCantidadProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\ProductosXCantidad\ReporteCantidadProductos.Designer.cs" />
+    <Compile Include="Formularios\Reportes\ProductosXCantidad\ReporteCantidadProductos1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReporteCantidadProductos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Proveedores\frm_ReporteProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Proveedores\frm_ReporteProveedores.Designer.cs">
+      <DependentUpon>frm_ReporteProveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Proveedores\ReporteProveedores.cs">
+      <DependentUpon>ReporteProveedores.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Proveedores\ReporteProveedores.Designer.cs">
+      <DependentUpon>ReporteProveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Proveedores\ReporteProveedores1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReporteProveedores.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Reporte_empleado\frm_reportelegajo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Reporte_empleado\frm_reportelegajo.Designer.cs">
+      <DependentUpon>frm_reportelegajo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Reporte_empleado\Reporte_empleado.Designer.cs" />
+    <Compile Include="Formularios\Reportes\Reporte_empleado\Reporte_empleado1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reporte_empleado.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\StockMenor\Frm_stock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\StockMenor\Frm_stock.Designer.cs">
+      <DependentUpon>Frm_stock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\StockMenor\ReporteStockMenor.cs">
+      <DependentUpon>ReporteStockMenor.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\StockMenor\ReporteStockMenor.Designer.cs">
+      <DependentUpon>ReporteStockMenor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\StockMenor\ReporteStockMenor1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReporteStockMenor.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\VentasKitXCantidad\frm_ReporteVentasKitXCantidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\VentasKitXCantidad\frm_ReporteVentasKitXCantidad.Designer.cs">
+      <DependentUpon>frm_ReporteVentasKitXCantidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\VentasKitXCantidad\ReporteVentasKitXCantidad.Designer.cs" />
+    <Compile Include="Formularios\Reportes\VentasKitXCantidad\ReporteVentasKitXCantidad1.Designer.cs">
+      <DependentUpon>ReporteVentasKitXCantidad.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Formularios\Reportes\VentasXPeriodo\frm_ReporteVentasXPeriodo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\VentasXPeriodo\frm_ReporteVentasXPeriodo.Designer.cs">
+      <DependentUpon>frm_ReporteVentasXPeriodo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\VentasXPeriodo\ReporteVentasXPeriodo.Designer.cs" />
+    <Compile Include="Formularios\Reportes\VentasXPeriodo\ReporteVentasXPeriodo1.Designer.cs">
+      <DependentUpon>ReporteVentasXPeriodo.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Formularios\Reportes\VentasXTipoFactura\DSListadoDeVentasTipoFactura.cs">
+      <DependentUpon>DSListadoDeVentasTipoFactura.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\VentasXTipoFactura\DSListadoDeVentasTipoFactura.Designer.cs">
+      <DependentUpon>DSListadoDeVentasTipoFactura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\VentasXTipoFactura\DSListadoDeVentasTipoFactura1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSListadoDeVentasTipoFactura.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\VentasXTipoFactura\ListadoDeVentasTipoFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\VentasXTipoFactura\ListadoDeVentasTipoFactura.Designer.cs">
+      <DependentUpon>ListadoDeVentasTipoFactura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Stock\frmReportesStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Stock\frmReportesStock.Designer.cs">
+      <DependentUpon>frmReportesStock.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Stock\frmStock.cs">
       <SubType>Form</SubType>
@@ -527,6 +785,7 @@
     <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
     <EmbeddedResource Include="Formularios\Clientes\Barrio\frm_AMB_Barrio.resx">
       <DependentUpon>frm_AMB_Barrio.cs</DependentUpon>
     </EmbeddedResource>
@@ -556,6 +815,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Clientes\frmClientes.resx">
       <DependentUpon>frmClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Clientes\frmReportesClientes.resx">
+      <DependentUpon>frmReportesClientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Clientes\Localidad\frm_AMB_Localidad.resx">
       <DependentUpon>frm_AMB_Localidad.cs</DependentUpon>
@@ -596,6 +858,9 @@
     <EmbeddedResource Include="Formularios\Compras\frmCompras.resx">
       <DependentUpon>frmCompras.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Compras\frmReportesCompras.resx">
+      <DependentUpon>frmReportesCompras.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Compras\Tipo_Factura\frm_ABM_Tipo_Factura.resx">
       <DependentUpon>frm_ABM_Tipo_Factura.cs</DependentUpon>
     </EmbeddedResource>
@@ -628,6 +893,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Empleados\frmEmpleados.resx">
       <DependentUpon>frmEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Empleados\frmReportesEmpleados.resx">
+      <DependentUpon>frmReportesEmpleados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Empleados\Perfil\frm_ABM_Perfil.resx">
       <DependentUpon>frm_ABM_Perfil.cs</DependentUpon>
@@ -673,6 +941,69 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Reportes\ClientesXBarrio\frm_ReporteClientesXBarrio.resx">
+      <DependentUpon>frm_ReporteClientesXBarrio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Reportes\ClientesXBarrio\ReporteClientesXBarrio.rdlc" />
+    <EmbeddedResource Include="Formularios\Reportes\ClientesXEdad\frm_ReporteClienteXEdad.resx">
+      <DependentUpon>frm_ReporteClienteXEdad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Reportes\ClientesXEdad\ReporteClienteXEdad.rdlc" />
+    <EmbeddedResource Include="Formularios\Reportes\ClientesXLocalidad\frm_clientesxlocalicad.resx">
+      <DependentUpon>frm_clientesxlocalicad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Reportes\ClientesXLocalidad\ReporteClientesXLocalidad.rdlc" />
+    <EmbeddedResource Include="Formularios\Reportes\CompraMayorA\ListadoVentasMayor.rdlc" />
+    <EmbeddedResource Include="Formularios\Reportes\CompraMayorA\ListadoVentasMayorA.resx">
+      <DependentUpon>ListadoVentasMayorA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Reportes\ListadoEmpleadoXRol\FrmReporteEmpleadoXRol.resx">
+      <DependentUpon>FrmReporteEmpleadoXRol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Reportes\ListadoEmpleadoXRol\ReporteEmpeladoXRol.rdlc" />
+    <EmbeddedResource Include="Formularios\Reportes\ListadoProductosXDeposito\FrmReporteProducto.resx">
+      <DependentUpon>FrmReporteProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Reportes\ListadoProductosXDeposito\ReporteProductoXDeposito.rdlc" />
+    <EmbeddedResource Include="Formularios\Reportes\ListadoVentaXBarrio\FrmReporteVentasXBarrio.resx">
+      <DependentUpon>FrmReporteVentasXBarrio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Reportes\ListadoVentaXBarrio\ReporteVentasXBarrio.rdlc" />
+    <EmbeddedResource Include="Formularios\Reportes\ProductosXCantidad\frm_ReporteCantidadProductos.resx">
+      <DependentUpon>frm_ReporteCantidadProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Reportes\ProductosXCantidad\ReporteCantidadProductos.rdlc" />
+    <EmbeddedResource Include="Formularios\Reportes\Proveedores\frm_ReporteProveedores.resx">
+      <DependentUpon>frm_ReporteProveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Reportes\Proveedores\ReporteProveedores.rdlc" />
+    <EmbeddedResource Include="Formularios\Reportes\Proveedores\ReporteProveedores2.rdlc" />
+    <EmbeddedResource Include="Formularios\Reportes\Proveedores\ReporteProveedores3.rdlc" />
+    <EmbeddedResource Include="Formularios\Reportes\Proveedores\ReporteProveedores4.rdlc" />
+    <EmbeddedResource Include="Formularios\Reportes\Proveedores\ReporteVentasPorFormaPago.rdlc" />
+    <EmbeddedResource Include="Formularios\Reportes\Reporte_empleado\frm_reportelegajo.resx">
+      <DependentUpon>frm_reportelegajo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Reportes\Reporte_empleado\Reporte_empleado.rdlc" />
+    <EmbeddedResource Include="Formularios\Reportes\StockMenor\Frm_stock.resx">
+      <DependentUpon>Frm_stock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Reportes\StockMenor\ReporteStockMenor.rdlc" />
+    <EmbeddedResource Include="Formularios\Reportes\VentasKitXCantidad\frm_ReporteVentasKitXCantidad.resx">
+      <DependentUpon>frm_ReporteVentasKitXCantidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Reportes\VentasKitXCantidad\ReporteVentasKitXCantidad.rdlc" />
+    <EmbeddedResource Include="Formularios\Reportes\VentasXPeriodo\frm_ReporteVentasXPeriodo.resx">
+      <DependentUpon>frm_ReporteVentasXPeriodo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Reportes\VentasXPeriodo\ReporteVentasXPeriodo.rdlc" />
+    <EmbeddedResource Include="Formularios\Reportes\VentasXTipoFactura\ListadoDeVentasTipoFactura.rdlc" />
+    <EmbeddedResource Include="Formularios\Reportes\VentasXTipoFactura\ListadoDeVentasTipoFactura.resx">
+      <DependentUpon>ListadoDeVentasTipoFactura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Stock\frmReportesStock.resx">
+      <DependentUpon>frmReportesStock.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Stock\frmStock.resx">
       <DependentUpon>frmStock.cs</DependentUpon>
@@ -763,12 +1094,178 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="BD3K6G12_2021DataSet.xsc">
+      <DependentUpon>BD3K6G12_2021DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BD3K6G12_2021DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BD3K6G12_2021DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BD3K6G12_2021DataSet.xss">
+      <DependentUpon>BD3K6G12_2021DataSet.xsd</DependentUpon>
+    </None>
     <None Include="bin\Debug\PAV_G12_K-BEZA.exe.config" />
+    <None Include="Formularios\Reportes\ClientesXBarrio\ReporteClientesXBarrio.xsc">
+      <DependentUpon>ReporteClientesXBarrio.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\Reportes\ClientesXBarrio\ReporteClientesXBarrio.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ReporteClientesXBarrio1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Formularios\Reportes\ClientesXBarrio\ReporteClientesXBarrio.xss">
+      <DependentUpon>ReporteClientesXBarrio.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\Reportes\ClientesXEdad\ReporteClientesXEdad.xsc">
+      <DependentUpon>ReporteClientesXEdad.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\Reportes\ClientesXEdad\ReporteClientesXEdad.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ReporteClientesXEdad1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Formularios\Reportes\ClientesXEdad\ReporteClientesXEdad.xss">
+      <DependentUpon>ReporteClientesXEdad.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\Reportes\ClientesXLocalidad\ReporteClientesXLocalidad.xsc">
+      <DependentUpon>ReporteClientesXLocalidad.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\Reportes\ClientesXLocalidad\ReporteClientesXLocalidad.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ReporteClientesXLocalidad1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Formularios\Reportes\ClientesXLocalidad\ReporteClientesXLocalidad.xss">
+      <DependentUpon>ReporteClientesXLocalidad.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\Reportes\CompraMayorA\VentasMayoresA.xsc">
+      <DependentUpon>VentasMayoresA.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\Reportes\CompraMayorA\VentasMayoresA.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VentasMayoresA.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Formularios\Reportes\CompraMayorA\VentasMayoresA.xss">
+      <DependentUpon>VentasMayoresA.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\Reportes\ListadoEmpleadoXRol\ReporteEmpeladoXRol.xsc">
+      <DependentUpon>ReporteEmpeladoXRol.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\Reportes\ListadoEmpleadoXRol\ReporteEmpeladoXRol.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ReporteEmpeladoXRol1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Formularios\Reportes\ListadoEmpleadoXRol\ReporteEmpeladoXRol.xss">
+      <DependentUpon>ReporteEmpeladoXRol.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\Reportes\ListadoProductosXDeposito\ReporteProductoXDeposito.xsc">
+      <DependentUpon>ReporteProductoXDeposito.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\Reportes\ListadoProductosXDeposito\ReporteProductoXDeposito.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ReporteProductoXDeposito1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Formularios\Reportes\ListadoProductosXDeposito\ReporteProductoXDeposito.xss">
+      <DependentUpon>ReporteProductoXDeposito.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\Reportes\ListadoVentaXBarrio\ReporteVentaBarrio.xsc">
+      <DependentUpon>ReporteVentaBarrio.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\Reportes\ListadoVentaXBarrio\ReporteVentaBarrio.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ReporteVentaBarrio1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Formularios\Reportes\ListadoVentaXBarrio\ReporteVentaBarrio.xss">
+      <DependentUpon>ReporteVentaBarrio.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\Reportes\ProductosXCantidad\ReporteCantidadProductos.xsc">
+      <DependentUpon>ReporteCantidadProductos.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\Reportes\ProductosXCantidad\ReporteCantidadProductos.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ReporteCantidadProductos1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Formularios\Reportes\ProductosXCantidad\ReporteCantidadProductos.xss">
+      <DependentUpon>ReporteCantidadProductos.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\Reportes\Proveedores\ReporteProveedores.xsc">
+      <DependentUpon>ReporteProveedores.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\Reportes\Proveedores\ReporteProveedores.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ReporteProveedores1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Formularios\Reportes\Proveedores\ReporteProveedores.xss">
+      <DependentUpon>ReporteProveedores.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\Reportes\Reporte_empleado\Reporte_empleado.xsc">
+      <DependentUpon>Reporte_empleado.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\Reportes\Reporte_empleado\Reporte_empleado.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Reporte_empleado1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Formularios\Reportes\Reporte_empleado\Reporte_empleado.xss">
+      <DependentUpon>Reporte_empleado.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\Reportes\StockMenor\ReporteStockMenor.xsc">
+      <DependentUpon>ReporteStockMenor.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\Reportes\StockMenor\ReporteStockMenor.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ReporteStockMenor1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Formularios\Reportes\StockMenor\ReporteStockMenor.xss">
+      <DependentUpon>ReporteStockMenor.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\Reportes\VentasKitXCantidad\ReporteVentasKitXCantidad.xsc">
+      <DependentUpon>ReporteVentasKitXCantidad.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\Reportes\VentasKitXCantidad\ReporteVentasKitXCantidad.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ReporteVentasKitXCantidad1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Formularios\Reportes\VentasKitXCantidad\ReporteVentasKitXCantidad.xss">
+      <DependentUpon>ReporteVentasKitXCantidad.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\Reportes\VentasXPeriodo\ReporteVentasXPeriodo.xsc">
+      <DependentUpon>ReporteVentasXPeriodo.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\Reportes\VentasXPeriodo\ReporteVentasXPeriodo.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ReporteVentasXPeriodo1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Formularios\Reportes\VentasXPeriodo\ReporteVentasXPeriodo.xss">
+      <DependentUpon>ReporteVentasXPeriodo.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\Reportes\VentasXTipoFactura\DSListadoDeVentasTipoFactura.xsc">
+      <DependentUpon>DSListadoDeVentasTipoFactura.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\Reportes\VentasXTipoFactura\DSListadoDeVentasTipoFactura.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSListadoDeVentasTipoFactura1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Formularios\Reportes\VentasXTipoFactura\DSListadoDeVentasTipoFactura.xss">
+      <DependentUpon>DSListadoDeVentasTipoFactura.xsd</DependentUpon>
+    </None>
     <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
     <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <None Include="obj\Debug\PAV_G12_K-BEZA.csproj.CoreCompileInputs.cache" />
     <None Include="obj\Debug\PAV_G12_K-BEZA.csproj.GenerateResource.cache" />
     <None Include="obj\Debug\PAV_G12_K-BEZA.csprojAssemblyReference.cache" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -798,6 +1295,23 @@
     <Content Include="obj\Debug\PAV_G12_K-BEZA.exe" />
     <Content Include="obj\Debug\PAV_G12_K-BEZA.pdb" />
     <Content Include="obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
+    <None Include="Resources\iconfinder_70593_mastercard_curved_icon_128px.png" />
+    <None Include="Resources\13.png" />
+    <None Include="Resources\iconfinder_4781825_cash_credit_currency_dollar_finance_icon_128px.png" />
+    <None Include="Resources\iconfinder_206684_visa_method_card_payment_icon_128px.png" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="Resources\Login.png" />
     <None Include="Resources\Limpiar.png" />
     <None Include="Resources\Cancelar.png" />

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ReporteClientesXEdad" targetNamespace="http://tempuri.org/ReporteClientesXEdad.xsd" xmlns:mstns="http://tempuri.org/ReporteClientesXEdad.xsd" xmlns="http://tempuri.org/ReporteClientesXEdad.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ReporteClientesXEdad" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ReporteClientesXEdad" msprop:Generator_UserDSName="ReporteClientesXEdad">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ReporteClientesXEdad" msprop:Generator_TableClassName="ReporteClientesXEdadDataTable" msprop:Generator_TableVarName="tableReporteClientesXEdad" msprop:Generator_TablePropName="_ReporteClientesXEdad" msprop:Generator_RowDeletingName="ReporteClientesXEdadRowDeleting" msprop:Generator_RowChangingName="ReporteClientesXEdadRowChanging" msprop:Generator_RowEvHandlerName="ReporteClientesXEdadRowChangeEventHandler" msprop:Generator_RowDeletedName="ReporteClientesXEdadRowDeleted" msprop:Generator_UserTableName="ReporteClientesXEdad" msprop:Generator_RowChangedName="ReporteClientesXEdadRowChanged" msprop:Generator_RowEvArgName="ReporteClientesXEdadRowChangeEvent" msprop:Generator_RowClassName="ReporteClientesXEdadRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="descripcion_tipo_doc" msprop:Generator_ColumnVarNameInTable="columndescripcion_tipo_doc" msprop:Generator_ColumnPropNameInRow="descripcion_tipo_doc" msprop:Generator_ColumnPropNameInTable="descripcion_tipo_docColumn" msprop:Generator_UserColumnName="descripcion_tipo_doc" type="xs:string" minOccurs="0" />
+              <xs:element name="numero_documento" msprop:Generator_ColumnVarNameInTable="columnnumero_documento" msprop:Generator_ColumnPropNameInRow="numero_documento" msprop:Generator_ColumnPropNameInTable="numero_documentoColumn" msprop:Generator_UserColumnName="numero_documento" type="xs:string" minOccurs="0" />
+              <xs:element name="apellido" msprop:Generator_ColumnVarNameInTable="columnapellido" msprop:Generator_ColumnPropNameInRow="apellido" msprop:Generator_ColumnPropNameInTable="apellidoColumn" msprop:Generator_UserColumnName="apellido" type="xs:string" minOccurs="0" />
+              <xs:element name="nombre" msprop:Generator_ColumnVarNameInTable="columnnombre" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_UserColumnName="nombre" type="xs:string" minOccurs="0" />
+              <xs:element name="fecha_nacimiento" msprop:Generator_ColumnVarNameInTable="columnfecha_nacimiento" msprop:Generator_ColumnPropNameInRow="fecha_nacimiento" msprop:Generator_ColumnPropNameInTable="fecha_nacimientoColumn" msprop:Generator_UserColumnName="fecha_nacimiento" type="xs:string" minOccurs="0" />
+              <xs:element name="sexo" msprop:Generator_ColumnVarNameInTable="columnsexo" msprop:Generator_ColumnPropNameInRow="sexo" msprop:Generator_ColumnPropNameInTable="sexoColumn" msprop:Generator_UserColumnName="sexo" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

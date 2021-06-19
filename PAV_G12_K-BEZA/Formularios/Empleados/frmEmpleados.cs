@@ -11,6 +11,7 @@ using PAV_G12_K_BEZA.Formularios.Empleados.Perfil;
 using PAV_G12_K_BEZA.Formularios.Empleados.Usuario;
 using PAV_G12_K_BEZA.Formularios.Empleados.Tipo_Rol;
 using PAV_G12_K_BEZA.Formularios.Empleados.Empleado;
+using PAV_G12_K_BEZA.Formularios.Empleados;
 
 namespace PAV_G12_K_BEZA.Formularios.Empleados
 {
@@ -55,6 +56,12 @@ namespace PAV_G12_K_BEZA.Formularios.Empleados
         {
             frm_ABM_Empleados abmempleado = new frm_ABM_Empleados();
             abmempleado.ShowDialog();
+        }
+
+        private void btnReportes_Click(object sender, EventArgs e)
+        {
+            frmReportesEmpleados reportes = new frmReportesEmpleados();
+            reportes.ShowDialog();
         }
     }
 }

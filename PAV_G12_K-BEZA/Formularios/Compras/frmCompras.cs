@@ -42,6 +42,12 @@ namespace PAV_G12_K_BEZA.Formularios.Compras
             Frm_Compras transCompras = new Frm_Compras();
             transCompras.ShowDialog();
         }
+
+        private void btnReportes_Click(object sender, EventArgs e)
+        {
+            frmReportesCompras reportes = new frmReportesCompras();
+            reportes.ShowDialog();
+        }
     }
 }
 
